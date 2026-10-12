@@ -331,7 +331,11 @@
 
   /* Footer */
   footer { background: var(--navy); color: rgba(255, 255, 255, 0.55); text-align: center; padding: var(--s3); font-size: 0.875rem; }
-  footer span { color: var(--white); }
+  footer span, footer a { color: var(--white); }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--white); text-decoration: underline; }
+  .nav-main { margin-left: 14px; padding: 2px 0 2px 18px; border-left: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+  .nav-main:hover { color: var(--navy); }
 
   /* Skip link */
   .skip-link { position: absolute; top: -48px; left: 16px; background: var(--blue); color: var(--white); padding: 8px 16px; border-radius: 0 0 var(--radius) var(--radius); font-size: 0.9rem; z-index: 999; transition: top 0.2s; text-decoration: none; }
@@ -352,6 +356,7 @@
     nav { position: static; height: auto; padding: 12px 16px; flex-direction: column; gap: 6px; }
     .nav-links { flex-wrap: wrap; justify-content: center; }
     .nav-links button { font-size: 0.85rem; padding: 6px 8px; }
+    .nav-main { margin-left: 0; padding: 6px 8px; border-left: none; font-size: 0.85rem; }
     .nav-dropdown-menu { left: 50%; transform: translateX(-50%); }
     .sub-nav { top: 0; padding: 0 8px; }
     .subsection { scroll-margin-top: 56px; }
@@ -472,6 +477,7 @@
 
     <button onclick="showPage('coaching')" id="nav-coaching">Coaching</button>
     <button onclick="showPage('contact')" id="nav-contact">Contact</button>
+    <a class="nav-main" href="/" title="Back to suhaasnarayanan.com">Main Site</a>
   </div>
 </nav>
 
@@ -575,7 +581,7 @@
     </div>
     <a class="game-link" href="https://lichess.org/study/oAqAo3ZN" target="_blank" rel="noopener">See all my favorite games on Lichess</a>
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 
 <!-- ══ JOURNEY ══
@@ -780,7 +786,7 @@
     </div>
 
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 
 <!-- ══ PHILOSOPHY ══ -->
@@ -910,7 +916,7 @@
     </div>
 
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 
 <!-- ══ IMPROVEMENT ══
@@ -1150,7 +1156,7 @@
     </div>
 
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 
 <!-- ══ COACHING ══ -->
@@ -1280,7 +1286,7 @@
     </div>
 
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 
 <!-- ══ CONTACT ══ -->
@@ -1339,7 +1345,7 @@
       </div>
     </div>
   </div>
-  <footer>© 2026 <span>Suhaas Narayanan</span> · All rights reserved</footer>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a> · All rights reserved</footer>
 </div>
 </div><!-- /#main-content -->
 
