@@ -443,6 +443,154 @@
     .rc-moments { grid-template-columns: 1fr; }
     .rc-tip { min-width: 170px; }
   }
+
+  /* ── VISUALS (photos, diagrams, charts, frameworks) ── */
+  /* Photos */
+  .photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: var(--s3) 0; }
+  .photo-pair img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); display: block; background: var(--band); }
+  .photo-wide { margin: var(--s3) 0; }
+  .photo-wide img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: 62% 30%; border-radius: var(--radius); display: block; background: var(--band); }
+
+  /* Board diagrams */
+  .pos { margin: var(--s2) 0 0; max-width: 320px; }
+  .pos img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 2px; }
+  .pos figcaption { font-size: 0.875rem; color: var(--muted); line-height: 1.5; margin-top: 8px; }
+  .pos figcaption strong { color: var(--navy); font-weight: 600; }
+  .pos figcaption a { white-space: nowrap; }
+
+  /* Road to 2200 */
+  .road-chart { --rc-reg: #2563b8; position: relative; margin: var(--s3) 0 var(--s4); padding: var(--s3); border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+  .rd-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 6px; }
+  .rd-title { font-family: var(--serif); font-size: var(--fs-card); color: var(--navy); }
+  .rd-sub { font-size: var(--fs-small); color: var(--muted); }
+  .rd-plot { width: 100%; min-height: 260px; touch-action: pan-y; }
+  .rd-plot svg { display: block; overflow: visible; }
+  .rd-grid { stroke: var(--line); }
+  .rd-axis { font-family: var(--sans); font-size: 12px; fill: var(--muted); }
+  .rd-tick, .rd-baseline { stroke: #b9c4d3; }
+  .rd-nm { stroke: var(--navy); stroke-dasharray: 4 4; }
+  .rd-nm-label { font-family: var(--sans); font-size: 12px; font-weight: 600; fill: var(--navy); }
+  .rd-line { fill: none; stroke: #2563b8; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+  .rd-beat { fill: var(--navy); stroke: var(--white); stroke-width: 2; }
+  .rd-beat-num { font-family: var(--sans); font-size: 9.5px; font-weight: 600; fill: var(--white); pointer-events: none; }
+  .rd-leader { stroke: var(--navy); stroke-width: 1; }
+  .rd-beat-label { font-family: var(--sans); font-size: 12.5px; font-weight: 600; fill: var(--navy); paint-order: stroke; stroke: var(--white); stroke-width: 4px; stroke-linejoin: round; }
+  .rd-cross { stroke: var(--muted); stroke-dasharray: 2 3; pointer-events: none; }
+  .rd-hot { fill: #2563b8; stroke: var(--white); stroke-width: 2; pointer-events: none; }
+  .rd-key { list-style: none; margin: var(--s2) 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; font-size: 0.8125rem; color: var(--muted); }
+  .rd-key li { display: flex; gap: 8px; align-items: flex-start; }
+  .road-chart .rc-tip { top: 0; left: 0; }
+  .rd-key[hidden] { display: none; }
+
+  /* Training balance (Chapter 4) */
+  .balance { margin: var(--s3) 0 0; border-top: 1px solid var(--line); }
+  .bal-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; align-items: center; font-size: var(--fs-small); color: var(--muted); padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .bal-legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .bal-note { margin-left: auto; font-style: italic; font-size: 0.8125rem; }
+  .bal-sw { display: inline-block; width: 14px; height: 8px; border-radius: 2px; }
+  .bal-time { background: #b6c2d2; }
+  .bal-pay { background: #2563b8; }
+  .bal-row { display: grid; grid-template-columns: 200px 1fr; gap: 6px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
+  .bal-label h4 { font-family: var(--sans); font-size: var(--fs-body); font-weight: 600; color: var(--navy); margin: 0; }
+  .bal-tag { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+  .bal-bars { display: grid; gap: 5px; }
+  .bal-track { height: 10px; background: var(--band); border-radius: 2px; overflow: hidden; }
+  .bal-bar { height: 100%; border-radius: 2px; }
+  .w1 { width: 10%; } .w2 { width: 20%; } .w3 { width: 30%; } .w4 { width: 40%; } .w5 { width: 50%; }
+  .w6 { width: 60%; } .w7 { width: 70%; } .w8 { width: 80%; } .w9 { width: 90%; } .w10 { width: 100%; }
+  .bal-row p { grid-column: 2; margin: 2px 0 0; font-size: var(--fs-small); }
+
+  /* Player profile spectrums */
+  .profile-wrap { display: grid; grid-template-columns: 1fr 300px; gap: var(--s4); align-items: start; margin-top: var(--s3); }
+  .profile-card { border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s3); background: var(--white); }
+  .profile-title { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: var(--s2); }
+  .spec { margin-bottom: 18px; }
+  .spec-ends { display: flex; justify-content: space-between; font-size: 0.8125rem; color: var(--muted); margin-bottom: 6px; }
+  .spec-track { position: relative; height: 4px; background: var(--line); border-radius: 2px; }
+  .spec-dot { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--navy); box-shadow: 0 0 0 3px var(--white); }
+  .spec-range { position: absolute; top: -3px; height: 10px; border-radius: 5px; background: var(--navy); opacity: 0.85; }
+  .p15 { left: 15%; } .p80 { left: 80%; }
+  .r35-65 { left: 35%; width: 30%; } .r25-85 { left: 25%; width: 60%; }
+  .spec-note { font-size: 0.75rem; color: var(--muted); text-align: center; margin-top: 6px; font-style: italic; }
+  .profile-card p { margin: var(--s2) 0 0; font-size: var(--fs-small); }
+  .pos-side { margin: 0; }
+
+  /* Daily routine */
+  .routine { border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s3); margin: var(--s3) 0; background: var(--white); }
+  .routine-title { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: var(--s2); }
+  .routine-steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s3); margin: 0; position: relative; }
+  .routine-steps li { position: relative; display: flex; flex-direction: column; gap: 2px; font-size: var(--fs-small); color: var(--muted); }
+  .routine-steps li:not(:last-child)::after { content: ''; position: absolute; top: 14px; left: 40px; right: -12px; height: 1px; background: var(--line); }
+  .routine-steps strong { color: var(--navy); font-weight: 600; font-size: var(--fs-body); margin-top: 8px; }
+  .rt-n { width: 28px; height: 28px; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 0.8125rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }
+  .routine-foot { margin-top: var(--s2); padding-top: 12px; border-top: 1px solid var(--line); font-size: var(--fs-small); color: var(--navy); font-weight: 600; }
+
+  /* Game review flow */
+  .flow { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: var(--s3) 0 var(--s4); border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+  .flow-step { padding: var(--s3); position: relative; }
+  .flow-step + .flow-step { border-left: 1px solid var(--line); }
+  .flow-step + .flow-step::before { content: ''; position: absolute; left: -7px; top: 34px; width: 12px; height: 12px; background: var(--white); border-top: 1px solid var(--line); border-right: 1px solid var(--line); transform: rotate(45deg); }
+  .flow-n { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: var(--white); font-weight: 600; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .flow-step h4 { font-family: var(--sans); font-size: var(--fs-body); font-weight: 600; color: var(--navy); margin: 0 0 8px; }
+  .subsection .flow-step p { font-size: var(--fs-small); margin-bottom: 10px; }
+
+  /* Opening map */
+  .opening-map { margin: var(--s3) 0 var(--s2); }
+  .om-frame { position: relative; padding: 28px 18px 28px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(to top right, var(--white) 0%, var(--white) 55%, var(--band) 100%); }
+  .om-area { position: relative; height: 360px; margin: 0 4px; border-left: 1px solid #b9c4d3; border-bottom: 1px solid #b9c4d3; }
+  .om-axis { position: absolute; font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .om-y-top { top: 8px; left: 22px; } .om-y-bot { bottom: 34px; left: 28px; }
+  .om-x-left { bottom: 8px; left: 22px; } .om-x-right { bottom: 8px; right: 18px; }
+  .om-pt { position: absolute; display: flex; align-items: center; gap: 7px; transform: translate(-6px, 50%); white-space: nowrap; font-size: 0.875rem; color: var(--ink); }
+  .om-pt.om-left { flex-direction: row-reverse; transform: translate(calc(-100% + 6px), 50%); }
+  .om-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--blue); background: var(--white); flex: none; }
+  .om-mine .om-dot, .om-dot-mine { background: var(--navy); border-color: var(--navy); }
+  .om-mine .om-name { font-weight: 600; color: var(--navy); }
+  .opening-map figcaption { font-size: 0.8125rem; color: var(--muted); margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+  .om-key { display: inline-flex; align-items: center; gap: 6px; color: var(--navy); font-weight: 600; }
+  .om-key .om-dot { display: inline-block; }
+  .om-vocab { margin: var(--s2) 0 var(--s3); }
+  .om-vocab summary { cursor: pointer; color: var(--blue); font-size: var(--fs-small); padding: 6px 0; }
+  .om-vocab .table-wrap { margin-top: 8px; }
+
+  /* Prep 2x2 */
+  .matrix { display: grid; grid-template-columns: 28px 1fr; grid-template-rows: 1fr auto; gap: 8px; margin: var(--s3) 0; }
+  .mx-ylab { display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
+  .mx-ylab span, .mx-xlab span { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .mx-ylab span { writing-mode: vertical-rl; transform: rotate(180deg); }
+  .mx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .mx-cell { padding: var(--s3); background: var(--white); }
+  .mx-cell h4 { font-family: var(--sans); font-size: var(--fs-body); font-weight: 600; color: var(--navy); margin: 0 0 6px; }
+  .subsection .mx-cell p { font-size: var(--fs-small); margin: 0; }
+  .mx-am, .mx-so { background: var(--callout); }
+  .mx-ao { background: var(--navy); }
+  .mx-ao h4 { color: var(--white); }
+  .subsection .mx-ao p { color: rgba(255, 255, 255, 0.8); }
+  .mx-sm { background: var(--white); }
+  .mx-xlab { grid-column: 2; display: flex; justify-content: space-around; }
+
+  @media (max-width: 900px) {
+    .profile-wrap { grid-template-columns: 1fr; }
+    .pos-side { max-width: 320px; }
+  }
+  @media (max-width: 640px) {
+    .photo-pair { gap: 8px; }
+    .road-chart { padding: var(--s2); }
+    .bal-row { grid-template-columns: 1fr; }
+    .bal-row p { grid-column: 1; }
+    .bal-note { margin-left: 0; }
+    .routine-steps { grid-template-columns: 1fr; gap: var(--s2); }
+    .routine-steps li { padding-left: 40px; }
+    .routine-steps li .rt-n { position: absolute; left: 0; top: 0; }
+    .routine-steps strong { margin-top: 3px; }
+    .routine-steps li:not(:last-child)::after { display: none; }
+    .flow { grid-template-columns: 1fr; }
+    .flow-step + .flow-step { border-left: none; border-top: 1px solid var(--line); }
+    .flow-step + .flow-step::before { left: 34px; top: -7px; transform: rotate(-45deg); }
+    .om-area { height: 420px; }
+    .om-pt { font-size: 0.75rem; }
+    .mx-cell { padding: var(--s2); }
+  }
 </style>
 </head>
 <body>
@@ -693,6 +841,12 @@
       <div class="subsection-label">Chapter 3</div>
       <h3>The Final Push to NM</h3>
       <p>Back at university, chess slid down my priority list. My decline started at the Penn Fall Swiss that October, and a rough winter break and a bad Liberty Bell Open dropped me below 2100, after I had peaked at 2146. That was my low point, and it forced me to rethink how I trained.</p>
+      <figure class="road-chart" id="road-chart" data-src="data/uscf-history.json">
+        <div class="rd-head"><span class="rd-title">The road to 2200</span><span class="rd-sub">Regular rating, May 2024 to October 2025</span></div>
+        <div class="rd-plot"></div>
+        <div class="rc-tip" hidden></div>
+        <ol class="rd-key" hidden></ol>
+      </figure>
       <h4 class="sub-h">What I changed</h4>
       <ul class="check-list">
         <li><strong>Finished the Woodpecker Method.</strong> Tactics finally stopped being something I avoided.</li>
@@ -701,6 +855,10 @@
         <li><strong>Worked through some of <em>Perfect Your Chess</em></strong> and played training games with lots of review.</li>
         <li><strong>Played for wins, not perfect games,</strong> and got serious about time management.</li>
       </ul>
+      <div class="photo-pair">
+        <img src="images/board-focus.jpg" width="800" height="987" loading="lazy" alt="Suhaas thinking over a position at a tournament, hand on his forehead">
+        <img src="images/penn-tournament.jpg" width="800" height="745" loading="lazy" alt="Suhaas in a Penn sweatshirt, chin in hand, studying the board at a tournament">
+      </div>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
@@ -713,12 +871,20 @@
           <div class="timeline-year">Philly Open</div>
           <h4>My Best Event</h4>
           <p>A draw, then three straight wins (two of them near-perfect games against 2000+ players), then a final-round draw with GM Maxim Dlugy as Black.</p>
+          <figure class="pos">
+            <img src="images/positions/dlugy.svg" width="480" height="480" loading="lazy" alt="Chess diagram from Black's side: Dlugy vs. Narayanan after 21...e5. White: Kc1, Qd2, Rd1, Rh1, Be2, Ne1, Nh5, pawns a2, b2, c3, d4, f2, g4, h3. Black: Kc8, Qd6, Rd8, Rf8, Bd7, Nc6, Ne7, pawns a7, b7, d5, e5, f6, g5, h6.">
+            <figcaption><strong>Dlugy vs. me, round 5.</strong> After 21…e5, the strongest my position got all game (engine: −0.6). I offered a draw here. <a href="https://lichess.org/study/oAqAo3ZN/r3iOWa6i" target="_blank" rel="noopener">Replay the game</a></figcaption>
+          </figure>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-year">Denver</div>
           <h4>Invitational Wins</h4>
           <p>I beat a 2000-rated player and FM Gunnar Andersen, Colorado's current strongest player, at an invitational event.</p>
+          <figure class="pos">
+            <img src="images/positions/gunnar.svg" width="480" height="480" loading="lazy" alt="Chess diagram from Black's side: Andersen vs. Narayanan after 21...dxc2. White: Kg1, Qe8, Ra1, Re1, Bh3, Nf3, pawns a3, b2, d7, f2, g3, h4. Black: Kg8, Qd6, Rd8, Rf8, Ba6, Nc6, pawns a4, b4, c2, d5, f7, g7, h7.">
+            <figcaption><strong>FM Gunnar Andersen vs. me, round 2.</strong> After 21.Bh3? dxc2!, Black is winning (engine: −4.2). <a href="https://lichess.org/study/oAqAo3ZN/hgJHRFfv" target="_blank" rel="noopener">Replay the game</a></figcaption>
+          </figure>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
@@ -753,25 +919,46 @@
       <div class="subsection-label">Chapter 4</div>
       <h3>What I'd Do Differently, Warts and All</h3>
       <p>This isn't a recommendation. For that, see the <a href="#improvement/level" onclick="goToSub('improvement','level'); return false;">Improvement guide</a>. This is an honest look at the path I actually took. My biggest regret is that I went too far in one direction, burned out, and then came up short in my weakest areas: endgames and tactics.</p>
-      <div class="principles-grid">
-        <div class="principle-card">
-          <h4>Openings (Too Much)</h4>
+      <div class="balance">
+        <div class="bal-legend"><span><i class="bal-sw bal-time"></i>Time and energy I put in</span><span><i class="bal-sw bal-pay"></i>What it gave back</span><span class="bal-note">Rough, after-the-fact estimates</span></div>
+        <div class="bal-row">
+          <div class="bal-label"><h4>Openings</h4><span class="bal-tag">Too much</span></div>
+          <div class="bal-bars" role="img" aria-label="Openings: time 9 out of 10, payoff 4 out of 10">
+            <div class="bal-track"><div class="bal-bar bal-time w9"></div></div>
+            <div class="bal-track"><div class="bal-bar bal-pay w4"></div></div>
+          </div>
           <p>Fun, but not always good ROI. I bought a lot of courses and switched lines often. Narrowing my repertoire did more for me than adding to it.</p>
         </div>
-        <div class="principle-card">
-          <h4>Tactics (Avoided)</h4>
+        <div class="bal-row">
+          <div class="bal-label"><h4>Tactics</h4><span class="bal-tag">Avoided</span></div>
+          <div class="bal-bars" role="img" aria-label="Tactics: time 2 out of 10, payoff 8 out of 10">
+            <div class="bal-track"><div class="bal-bar bal-time w2"></div></div>
+            <div class="bal-track"><div class="bal-bar bal-pay w8"></div></div>
+          </div>
           <p>I dodged them for years. The Woodpecker Method changed that by showing me tactics training can actually be fun.</p>
         </div>
-        <div class="principle-card">
-          <h4>Endgames (Neglected)</h4>
+        <div class="bal-row">
+          <div class="bal-label"><h4>Endgames</h4><span class="bal-tag">Neglected</span></div>
+          <div class="bal-bars" role="img" aria-label="Endgames: time 2 out of 10, payoff 7 out of 10">
+            <div class="bal-track"><div class="bal-bar bal-time w2"></div></div>
+            <div class="bal-track"><div class="bal-bar bal-pay w7"></div></div>
+          </div>
           <p>One of my weaker areas, although I gained much more confidence once I trained them religiously.</p>
         </div>
-        <div class="principle-card">
-          <h4>Community (The Real Secret)</h4>
+        <div class="bal-row">
+          <div class="bal-label"><h4>Community</h4><span class="bal-tag">The real secret</span></div>
+          <div class="bal-bars" role="img" aria-label="Community: time 6 out of 10, payoff 10 out of 10">
+            <div class="bal-track"><div class="bal-bar bal-time w6"></div></div>
+            <div class="bal-track"><div class="bal-bar bal-pay w10"></div></div>
+          </div>
           <p>The most important factor in my comeback. Find people to play, review, and talk chess with.</p>
         </div>
-        <div class="principle-card">
-          <h4>Training Games &amp; Review</h4>
+        <div class="bal-row">
+          <div class="bal-label"><h4>Training Games &amp; Review</h4><span class="bal-tag">Helped most</span></div>
+          <div class="bal-bars" role="img" aria-label="Training Games and Review: time 5 out of 10, payoff 10 out of 10">
+            <div class="bal-track"><div class="bal-bar bal-time w5"></div></div>
+            <div class="bal-track"><div class="bal-bar bal-pay w10"></div></div>
+          </div>
           <p>The thing that helped most in the final push. Play serious games and actually review them. <a href="#improvement/review" onclick="goToSub('improvement','review'); return false;">Here's how I do it.</a></p>
         </div>
       </div>
@@ -864,8 +1051,19 @@
           <p>Identify what keeps you motivated, what causes burnout, and where chess sits in the hierarchy of your life. This shapes everything.</p>
         </div>
       </div>
-      <div class="info-box">
-        <strong>My Example:</strong> I'm a calm, positional player who is heavily booked up on openings. I play a mix of bullet and OTB classical. Chess fluctuates between hobby and obsession for me. What I get out of chess is fun, goodness, truth, and beauty. My favorite piece is the pawn because of how essential but underrated they are. Seemingly simple things like pawn structure and breaks can shape an entire game.
+      <div class="profile-wrap">
+        <div class="profile-card">
+          <div class="profile-title">My example</div>
+          <div class="spec"><div class="spec-ends"><span>Sharp and attacking</span><span>Calm and positional</span></div><div class="spec-track"><span class="spec-dot p80"></span></div></div>
+          <div class="spec"><div class="spec-ends"><span>Booked up</span><span>Intuitive</span></div><div class="spec-track"><span class="spec-dot p15"></span></div></div>
+          <div class="spec"><div class="spec-ends"><span>Online (bullet)</span><span>OTB classical</span></div><div class="spec-track"><span class="spec-range r35-65"></span></div><div class="spec-note">A mix of both</div></div>
+          <div class="spec"><div class="spec-ends"><span>Hobby</span><span>Obsession</span></div><div class="spec-track"><span class="spec-range r25-85"></span></div><div class="spec-note">It fluctuates</div></div>
+          <p>What I get out of chess is fun, goodness, truth, and beauty. My favorite piece is the pawn because of how essential but underrated they are. Seemingly simple things like pawn structure and breaks can shape an entire game.</p>
+        </div>
+        <figure class="pos pos-side">
+          <img src="images/positions/shubh.svg" width="480" height="480" loading="lazy" alt="Chess diagram: Narayanan vs. Misra after 20.b4. White: Kg1, Rd1, Re1, Bc5, Bf1, Nf3, pawns a3, b4, c4, f2, g2, h2. Black: Ke8, Rc8, Rh8, Bd7, Nc6, Nf6, pawns a5, b7, e6, f7, g7, h6.">
+          <figcaption><strong>My style in one position.</strong> Me vs. Shubh Misra, 2026. With 20.b4! I was quite happy to get my queenside majority rolling (engine: +3.6). <a href="https://lichess.org/study/oAqAo3ZN/kKKP2PWU" target="_blank" rel="noopener">Replay the game</a></figcaption>
+        </figure>
       </div>
     </div>
 
@@ -962,8 +1160,14 @@
       <h3>The Areas of Chess Training</h3>
       <p>Chess training takes many forms. These are the core areas I've found, and each one has more specific skills to work on as you progress. There's a lot to improve, which is both daunting and exciting: there's always something new to learn.</p>
       <p>The good news is that you rarely get weaker in the short term (one to six months). You just get rusty or less sharp. Thanks to muscle memory, regaining your form is much easier than building it the first time.</p>
-      <div class="info-box">
-        <strong>My daily routine:</strong> a few tactics (I recommend at least 5 <a href="https://lichess.org/training" target="_blank" rel="noopener">Lichess puzzles</a> a day to stay sharp), a rapid game, and a review of that game. If you only do one thing, do this.
+      <div class="routine">
+        <div class="routine-title">My daily routine</div>
+        <ol class="routine-steps">
+          <li><span class="rt-n">1</span><strong>A few tactics</strong><span>I recommend at least 5 <a href="https://lichess.org/training" target="_blank" rel="noopener">Lichess puzzles</a> a day to stay sharp.</span></li>
+          <li><span class="rt-n">2</span><strong>A rapid game</strong></li>
+          <li><span class="rt-n">3</span><strong>A review of that game</strong></li>
+        </ol>
+        <div class="routine-foot">If you only do one thing, do this.</div>
       </div>
       <div class="principles-grid grid-3">
         <div class="principle-card">
@@ -1014,21 +1218,26 @@
       <h3>How I Review Games</h3>
       <p>After any longer game (10+ minutes), add it to a <a href="https://lichess.org/study" target="_blank" rel="noopener">Lichess study</a>. I keep all my training games together in one study so I can see my progress and spot patterns over time. I also add each game to my opening file for that line (more on that under <a href="#improvement/openings" onclick="goToSub('improvement','openings'); return false;">Openings</a>).</p>
       <p>To track results over time, I use a <a href="https://docs.google.com/spreadsheets/d/1BPghNkw5zuv0cW8Yi_REqEJH5LXP_z4WmbX5KVlIFSI/edit?usp=sharing" target="_blank" rel="noopener">self-analysis spreadsheet</a> for openings and for tournament and training games. Feel free to make a copy.</p>
-      <h4 class="sub-h">1. Annotate first, without an engine</h4>
-      <ul class="check-list">
-        <li><strong>Write down your thoughts move by move.</strong> Keep notes brief and to the point, like "expected 7…Ng4 but he went 7…h5."</li>
-        <li><strong>Add the key variations</strong> you considered and what you thought of them.</li>
-      </ul>
-      <h4 class="sub-h">2. Then check with the engine</h4>
-      <ul class="check-list">
-        <li><strong>Request a computer analysis</strong> on Lichess to see your accuracy and blunder count. It's the Lichess version of Chess.com's Game Review.</li>
-        <li><strong>Compare it with your notes.</strong> Where the engine disagreed, write down what it found and why you missed it. For example: "Engine found Nxe5! but I thought there wasn't enough compensation."</li>
-      </ul>
-      <h4 class="sub-h">3. Don't over-rely on the engine</h4>
-      <ul class="check-list">
-        <li><strong>It's a fact checker.</strong> It can give useful insight, but don't take its first word for granted. If a line feels funky, play it further until it shows something concrete.</li>
-        <li><strong>Ignore tiny differences.</strong> A gap of 0.2 or less usually isn't worth your time.</li>
-      </ul>
+      <ol class="flow">
+        <li class="flow-step">
+          <span class="flow-n">1</span>
+          <h4>Annotate first, without an engine</h4>
+          <p><strong>Write down your thoughts move by move.</strong> Keep notes brief and to the point, like "expected 7…Ng4 but he went 7…h5."</p>
+          <p><strong>Add the key variations</strong> you considered and what you thought of them.</p>
+        </li>
+        <li class="flow-step">
+          <span class="flow-n">2</span>
+          <h4>Then check with the engine</h4>
+          <p><strong>Request a computer analysis</strong> on Lichess to see your accuracy and blunder count. It's the Lichess version of Chess.com's Game Review.</p>
+          <p><strong>Compare it with your notes.</strong> Where the engine disagreed, write down what it found and why you missed it. For example: "Engine found Nxe5! but I thought there wasn't enough compensation."</p>
+        </li>
+        <li class="flow-step">
+          <span class="flow-n">3</span>
+          <h4>Don't over-rely on the engine</h4>
+          <p><strong>It's a fact checker.</strong> It can give useful insight, but don't take its first word for granted. If a line feels funky, play it further until it shows something concrete.</p>
+          <p><strong>Ignore tiny differences.</strong> A gap of 0.2 or less usually isn't worth your time.</p>
+        </li>
+      </ol>
       <h4 class="sub-h">Tournament games</h4>
       <p>Follow the same process, but go into more detail. You'll have calculated many more lines and had many more thoughts during a tournament game, so get them down. Don't be tempted to open the engine before you annotate. Gukesh famously trained without engines for years.</p>
       <h4 class="sub-h">Keep a tournament journal</h4>
@@ -1043,8 +1252,20 @@
     <div class="subsection" id="sub-improvement-openings">
       <div class="subsection-label">The First Moves</div>
       <h3>Opening Study</h3>
-      <p>Before picking openings, it helps to know what kind of positions you enjoy. Here's the vocabulary I use:</p>
-      <div class="table-wrap"><table class="week-table">
+      <p>Before picking openings, it helps to know what kind of positions you enjoy. Here's how some common openings map out, plus the vocabulary I use:</p>
+      <figure class="opening-map" id="opening-map">
+        <div class="om-frame">
+          <span class="om-axis om-y-top">Sharp</span>
+          <span class="om-axis om-y-bot">Positional</span>
+          <div class="om-area"></div>
+          <span class="om-axis om-x-left">Closed</span>
+          <span class="om-axis om-x-right">Open</span>
+        </div>
+        <figcaption><span class="om-key"><span class="om-dot om-dot-mine"></span>In my repertoire</span> Rough placements: most openings can be played in more than one style.</figcaption>
+      </figure>
+      <details class="om-vocab">
+        <summary>The full vocabulary</summary>
+        <div class="table-wrap"><table class="week-table">
         <thead><tr><th>Profile</th><th>What it means</th></tr></thead>
         <tbody>
           <tr><td>Closed</td><td>Locked pawn chains and slow maneuvering</td></tr>
@@ -1060,6 +1281,7 @@
           <tr><td>Symmetrical</td><td>Both sides mirror each other's setup</td></tr>
         </tbody>
       </table></div>
+      </details>
       <p>For what it's worth, I dislike symmetrical positions and gravitate toward classical openings, systems, and positional lines.</p>
       <h4 class="sub-h">Learning a new opening</h4>
       <ul class="check-list">
@@ -1084,23 +1306,27 @@
       </ul>
       <h4 class="sub-h">Picking a prep style</h4>
       <p>I classify prep using a 2×2 matrix: ambitious or solid, mainline or offbeat. Choose the quadrant that fits the situation, for example a game you must win.</p>
-      <div class="principles-grid">
-        <div class="principle-card">
-          <h4>Ambitious + Offbeat</h4>
-          <p>Highest risk and reward. This is the modern engine-prep approach, like Nxc6!? in the Accelerated Dragon.</p>
+      <div class="matrix">
+        <div class="mx-ylab"><span>Ambitious</span><span>Solid</span></div>
+        <div class="mx-grid">
+          <div class="mx-cell mx-am">
+            <h4>Ambitious + Mainline</h4>
+            <p>Live and die by the sword, Fischer and Kasparov style.</p>
+          </div>
+          <div class="mx-cell mx-ao">
+            <h4>Ambitious + Offbeat</h4>
+            <p>Highest risk and reward. This is the modern engine-prep approach, like Nxc6!? in the Accelerated Dragon.</p>
+          </div>
+          <div class="mx-cell mx-sm">
+            <h4>Solid + Mainline</h4>
+            <p>Get an intuitive and playable game, like Seirawan's English.</p>
+          </div>
+          <div class="mx-cell mx-so">
+            <h4>Solid + Offbeat</h4>
+            <p>Get a calm, imbalanced position and outplay them later. This is the typical club player's profile, and it described my old Hyper-Accelerated Dragon.</p>
+          </div>
         </div>
-        <div class="principle-card">
-          <h4>Ambitious + Mainline</h4>
-          <p>Live and die by the sword, Fischer and Kasparov style.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Solid + Mainline</h4>
-          <p>Get an intuitive and playable game, like Seirawan's English.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Solid + Offbeat</h4>
-          <p>Get a calm, imbalanced position and outplay them later. This is the typical club player's profile, and it described my old Hyper-Accelerated Dragon.</p>
-        </div>
+        <div class="mx-xlab"><span>Mainline</span><span>Offbeat</span></div>
       </div>
     </div>
 
@@ -1108,6 +1334,10 @@
       <div class="subsection-label">Find Your People</div>
       <h3>Chess Communities</h3>
       <p>Your chess community is simply the people you do chess with, and it's the single most important factor in my own comeback. Find one through a Google search, a local club, tournaments, or pub chess.</p>
+      <div class="photo-pair">
+        <img src="images/cafe-menu.jpg" width="800" height="891" loading="lazy" alt="A chess café table set up for a game, with a cocktail menu named after chess openings and gambits">
+        <img src="images/cafe-amsterdam.jpg" width="800" height="847" loading="lazy" alt="Low view of a chessboard at a café in Amsterdam, walls covered in posters and framed photos">
+      </div>
       <div class="principles-grid">
         <div class="principle-card">
           <h4>Online, Free</h4>
@@ -1262,6 +1492,9 @@
       <div class="subsection-label">Background</div>
       <h3>Teaching Experience</h3>
       <p>I'm a chess enthusiast who plays competitively and coaches. I've found my activity in chess tournaments has helped me in my coaching, and my students have had great results.</p>
+      <figure class="photo-wide">
+        <img src="images/coaching-simul.jpg" width="1200" height="1001" loading="lazy" alt="Suhaas in a ChessMates Instructor shirt playing a simultaneous exhibition against a row of young players in a gym">
+      </figure>
       <p>I've worked with <a href="https://chessmatesfc.com/coach/suhaas-narayanan/" target="_blank" rel="noopener">Chessmates</a> since I was in middle school through volunteering at tournaments to teaching at summer camps and elementary school chess clubs. On a gap year in college, I resumed teaching after-school chess clubs and private lessons. After taking some time to engage with chess, I've become obsessed again. I believe chess is a fun and incredibly deep game for people from all walks of life, and it's played an important role in my own life.</p>
       <h4 class="sub-h">Why I like teaching chess</h4>
       <p>I'm indebted to the parts of my childhood spent in all the chess tournaments, summer camps, and lessons. Mentoring is very uplifting for both me and my students, and I'm grateful for the opportunity to join and give back to this community. It's fun to instill a passion for the game and help everyone progress.</p>
@@ -1550,6 +1783,7 @@
   }
 </script>
 <script src="rating-chart.js" defer></script>
+<script src="visuals.js" defer></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac4439d40705499ab789aa120376ae2f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
