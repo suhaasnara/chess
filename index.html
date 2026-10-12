@@ -371,6 +371,73 @@
   @media (prefers-reduced-motion: reduce) {
     .page { animation: none; }
   }
+
+  /* ── RATING CHART (My Journey) ── */
+  .rating-chart { --rc-reg: #2563b8; --rc-quick: #d9622c; --rc-blitz: #199e70; position: relative; margin: var(--s2) 0 var(--s3); }
+  .rc-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s2); margin: var(--s3) 0 var(--s2); }
+  .rc-stat { border-top: 1px solid var(--line); padding-top: 10px; }
+  .rc-stat-n { display: block; font-family: var(--serif); font-size: 1.6rem; color: var(--navy); line-height: 1.2; }
+  .rc-stat-l { display: block; font-size: var(--fs-small); color: var(--muted); }
+  .rc-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .rc-chip { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-small); color: var(--muted); background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+  .rc-chip[aria-pressed="true"] { color: var(--ink); border-color: var(--navy); }
+  .rc-chip[aria-pressed="false"] .rc-sw { opacity: 0.35; }
+  .rc-sw { display: inline-block; width: 14px; height: 3px; border-radius: 2px; }
+  .rc-sw.rc-reg { background: var(--rc-reg); } .rc-sw.rc-quick { background: var(--rc-quick); } .rc-sw.rc-blitz { background: var(--rc-blitz); }
+  .rc-plot { width: 100%; min-height: 300px; touch-action: pan-y; }
+  .rc-plot svg { display: block; overflow: visible; }
+  .rc-plot svg:focus { outline: none; }
+  .rc-plot svg:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+  .rc-grid { stroke: var(--line); stroke-width: 1; }
+  .rc-baseline { stroke: #b9c4d3; stroke-width: 1; }
+  .rc-tick { stroke: #b9c4d3; }
+  .rc-break { stroke: var(--muted); stroke-width: 1.5; }
+  .rc-axis { font-family: var(--sans); font-size: 12px; fill: var(--muted); }
+  .rc-nm { stroke: var(--navy); stroke-width: 1; stroke-dasharray: 4 4; }
+  .rc-nm-label { font-family: var(--sans); font-size: 12px; font-weight: 600; fill: var(--navy); }
+  .rc-gap { fill: var(--band); }
+  .rc-gap-label { font-family: var(--sans); font-size: 12px; fill: var(--muted); font-style: italic; }
+  .rc-line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .rc-line.rc-reg { stroke: var(--rc-reg); } .rc-line.rc-quick { stroke: var(--rc-quick); } .rc-line.rc-blitz { stroke: var(--rc-blitz); }
+  .rc-dot { stroke: var(--white); stroke-width: 1; }
+  .rc-dot.rc-quick, .rc-hot.rc-quick { fill: var(--rc-quick); } .rc-dot.rc-blitz, .rc-hot.rc-blitz { fill: var(--rc-blitz); } .rc-hot.rc-reg { fill: var(--rc-reg); }
+  .rc-hot { stroke: var(--white); stroke-width: 2; pointer-events: none; }
+  .rc-ms-dot { fill: var(--navy); stroke: var(--white); stroke-width: 2; }
+  .rc-ms-num { font-family: var(--sans); font-size: 10px; font-weight: 600; fill: var(--white); pointer-events: none; }
+  .rc-cross { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; pointer-events: none; }
+  .rc-tip { position: absolute; z-index: 5; pointer-events: none; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 4px 16px rgba(19,40,74,0.12); padding: 10px 12px; font-size: 0.875rem; color: var(--ink); min-width: 190px; max-width: 260px; line-height: 1.45; }
+  .rc-plot + .rc-tip { top: 0; left: 0; }
+  .rc-tip-date { font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .rc-tip-event { font-weight: 600; color: var(--navy); margin: 2px 0 6px; }
+  .rc-tip-event span { font-weight: 400; color: var(--muted); }
+  .rc-tip-row { display: flex; align-items: center; gap: 8px; }
+  .rc-tip-row b { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .rc-tip-d { color: var(--muted); font-variant-numeric: tabular-nums; min-width: 36px; text-align: right; }
+  .rc-tip-ms { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line); color: var(--navy); font-weight: 600; }
+  .rc-moments { list-style: none; margin: 0 0 var(--s3); display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--s3); }
+  .rc-moments li { border-bottom: 1px solid var(--line); }
+  .rc-moments button { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; background: none; border: 0; padding: 10px 0; cursor: pointer; color: var(--muted); font-size: var(--fs-small); line-height: 1.45; }
+  .rc-moments button:hover strong { color: var(--blue); }
+  .rc-moments strong { color: var(--navy); font-weight: 600; }
+  .rc-num { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--navy); color: var(--white); font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .rc-m-meta { display: block; }
+  .rc-table { margin: 0 0 var(--s2); }
+  .rc-table summary { cursor: pointer; color: var(--blue); font-size: var(--fs-small); padding: 6px 0; }
+  .rc-table-scroll { max-height: 420px; overflow: auto; border: 1px solid var(--line); border-radius: var(--radius); margin-top: 8px; background: var(--white); }
+  .rc-table table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .rc-table th { position: sticky; top: 0; background: var(--band); color: var(--navy); font-weight: 600; text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+  .rc-table td { padding: 6px 10px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: top; font-variant-numeric: tabular-nums; }
+  .rc-table th:nth-child(n+4), .rc-table td:nth-child(n+4) { text-align: right; white-space: nowrap; }
+  .rc-td-d { display: block; font-size: 0.75rem; color: var(--muted); }
+  .rc-na { color: #a3adbb; }
+  .rc-nowrap { white-space: nowrap; }
+  .subsection .rc-source { font-size: var(--fs-small); margin-top: var(--s1); }
+  .rc-error { padding: var(--s3) 0; }
+  @media (max-width: 640px) {
+    .rc-stats { grid-template-columns: 1fr 1fr; }
+    .rc-moments { grid-template-columns: 1fr; }
+    .rc-tip { min-width: 170px; }
+  }
 </style>
 </head>
 <body>
@@ -520,7 +587,8 @@
   </div>
 
   <div class="sub-nav" id="subnav-journey">
-    <button class="active" onclick="scrollToSub('journey','early',event)">Early Years</button>
+    <button class="active" onclick="scrollToSub('journey','rating',event)">Rating History</button>
+    <button onclick="scrollToSub('journey','early',event)">Early Years</button>
     <button onclick="scrollToSub('journey','serious',event)">The Comeback</button>
     <button onclick="scrollToSub('journey','push',event)">The Final Push</button>
     <button onclick="scrollToSub('journey','highlights',event)">Highlights</button>
@@ -529,6 +597,39 @@
   </div>
 
   <div class="section-content">
+
+    <div class="subsection" id="sub-journey-rating">
+      <div class="subsection-label">By the Numbers</div>
+      <h3>My US Chess Rating</h3>
+      <p>Every rated tournament I've played since 2009, from the US Chess records. Hover over or tap the line to see each event.</p>
+      <div class="rc-stats">
+        <div class="rc-stat"><span class="rc-stat-n">2228</span><span class="rc-stat-l">Current regular rating</span></div>
+        <div class="rc-stat"><span class="rc-stat-n">2231</span><span class="rc-stat-l">Career high, Feb 2026</span></div>
+        <div class="rc-stat"><span class="rc-stat-n">Oct 2025</span><span class="rc-stat-l">Became a National Master</span></div>
+        <div class="rc-stat"><span class="rc-stat-n">174</span><span class="rc-stat-l">Rated tournaments</span></div>
+      </div>
+      <div class="rating-chart" id="rating-chart" data-src="data/uscf-history.json">
+        <div class="rc-chips" role="group" aria-label="Rating types shown">
+          <button type="button" class="rc-chip" data-key="r" aria-pressed="true"><span class="rc-sw rc-reg"></span>Regular</button>
+          <button type="button" class="rc-chip" data-key="q" aria-pressed="false"><span class="rc-sw rc-quick"></span>Quick</button>
+          <button type="button" class="rc-chip" data-key="b" aria-pressed="false"><span class="rc-sw rc-blitz"></span>Blitz</button>
+        </div>
+        <div class="rc-plot"></div>
+        <div class="rc-tip" hidden></div>
+      </div>
+      <h4 class="minor-h">Key moments</h4>
+      <ol class="rc-moments" id="rating-moments"></ol>
+      <details class="rc-table">
+        <summary>See all <span id="rating-table-count">177</span> rated results</summary>
+        <div class="rc-table-scroll">
+          <table>
+            <thead><tr><th>Date</th><th>Event</th><th>State</th><th>Regular</th><th>Quick</th><th>Blitz</th></tr></thead>
+            <tbody id="rating-table-body"></tbody>
+          </table>
+        </div>
+      </details>
+      <p class="rc-source">Source: <a href="https://ratings.uschess.org/player/14290675" target="_blank" rel="noopener">US Chess ratings, member 14290675</a>. Includes results through May 9, 2026.</p>
+    </div>
 
     <div class="subsection" id="sub-journey-early">
       <div class="subsection-label">Chapter 1</div>
@@ -1441,6 +1542,7 @@
     }
   }
 </script>
+<script src="rating-chart.js" defer></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac4439d40705499ab789aa120376ae2f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
