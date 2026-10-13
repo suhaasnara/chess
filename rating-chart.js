@@ -38,7 +38,7 @@
     const p = prevOf(i, key), v = rows[i][key];
     if (p == null || v == null) return '';
     const d = v - p;
-    return d === 0 ? '±0' : (d > 0 ? '+' + d : '−' + Math.abs(d));
+    return d === 0 ? '±0' : (d > 0 ? '+' + d : '-' + Math.abs(d));
   };
 
   function render() {
@@ -52,7 +52,7 @@
       'aria-label': 'Line chart of Suhaas Narayanan\'s US Chess ratings from 2009 to 2026. A full table of results follows the chart.' }, svgWrap);
     svg.setAttribute('tabindex', '0');
 
-    // Time scale with one compressed break across the long pause (2019–2023),
+    // Time scale with one compressed break across the long pause (2019-2023),
     // so the comeback years get real width. The break is drawn and labeled.
     const t0 = toTime('2009-08-01'), t1 = toTime('2026-08-01');
     let A1 = null, B0 = null;
@@ -82,8 +82,8 @@
       if ((b - a) / 3.156e10 > GAP_YEARS) {
         const xa = x(A1), xb = x(B0), cx = (xa + xb) / 2;
         el('rect', { x: xa, y: m.t, width: xb - xa, height: H - m.t - m.b, class: 'rc-gap' }, g);
-        const labels = narrow ? ['No', 'rated', 'games', rows[i - 1].d.slice(0, 4) + '–' + rows[i].d.slice(2, 4)]
-                              : ['No rated', 'games', rows[i - 1].d.slice(0, 4) + '–' + rows[i].d.slice(0, 4)];
+        const labels = narrow ? ['No', 'rated', 'games', rows[i - 1].d.slice(0, 4) + '-' + rows[i].d.slice(2, 4)]
+                              : ['No rated', 'games', rows[i - 1].d.slice(0, 4) + '-' + rows[i].d.slice(0, 4)];
         labels.forEach((t, k) => {
           const tn = el('text', { x: cx, y: y(yMin) - 22 - (labels.length - 1 - k) * 14, class: 'rc-gap-label', 'text-anchor': 'middle' }, g);
           tn.textContent = t;
@@ -230,7 +230,7 @@
     // Full table, newest first
     if (tableBody) tableBody.innerHTML = rows.map((r, i) => i).reverse().map(i => {
       const r = rows[i];
-      const c = k => r[k] == null ? '<td class="rc-na">–</td>' : `<td>${r[k]}<span class="rc-td-d">${delta(i, k) || ''}</span></td>`;
+      const c = k => r[k] == null ? '<td class="rc-na">-</td>' : `<td>${r[k]}<span class="rc-td-d">${delta(i, k) || ''}</span></td>`;
       return `<tr><td class="rc-nowrap">${r.d}</td><td>${r.e}</td><td>${r.s}</td>${c('r')}${c('q')}${c('b')}</tr>`;
     }).join('');
     const cnt = document.getElementById('rating-table-count');

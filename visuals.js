@@ -101,7 +101,7 @@
         const r = rows[i], cx = x(toTime(r.d)), cy = y(r.r);
         cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.setAttribute('visibility', 'visible');
         dot.setAttribute('cx', cx); dot.setAttribute('cy', cy); dot.setAttribute('visibility', 'visible');
-        const d = r.prev == null ? '' : (r.r - r.prev > 0 ? '+' : r.r - r.prev < 0 ? '−' : '±') + Math.abs(r.r - r.prev);
+        const d = r.prev == null ? '' : (r.r - r.prev > 0 ? '+' : r.r - r.prev < 0 ? '-' : '±') + Math.abs(r.r - r.prev);
         tip.innerHTML = `<div class="rc-tip-date">${fmtDate(r.d)}</div><div class="rc-tip-event">${r.e} <span>(${r.s})</span></div><div class="rc-tip-row"><span class="rc-sw rc-reg"></span>Regular<b>${r.r}</b><span class="rc-tip-d">${d}</span></div>`;
         tip.hidden = false;
         const tw = tip.offsetWidth, th = tip.offsetHeight;
