@@ -179,6 +179,10 @@
   .profile-links a:hover { text-decoration: underline; }
 
   /* Home: favorite games (Lichess embed) */
+  .home-blog { padding: var(--s6) max(24px, calc((100% - 1040px) / 2)); background: var(--band); }
+  .home-blog h2, .home-faq h3 { font-size: var(--fs-section); margin-bottom: var(--s3); }
+  .home-blog .game-link { display: inline-block; margin-top: var(--s3); }
+  .home-faq { padding: var(--s6) max(24px, calc((100% - 1040px) / 2)); background: var(--white); }
   .home-games { padding: var(--s6) max(24px, calc((100% - 1040px) / 2)); background: var(--white); }
   .home-games h2 { font-size: var(--fs-section); margin-bottom: var(--s2); }
   .home-games > p { color: var(--muted); max-width: 65ch; margin-bottom: var(--s3); }
@@ -205,6 +209,8 @@
     position: sticky; top: var(--nav-h); z-index: 50; scrollbar-width: none;
   }
   .sub-nav::-webkit-scrollbar { display: none; }
+  /* Improvement has the most sections, so its menu starts further left to fit on laptop screens */
+  #subnav-improvement { padding-left: max(12px, min(calc(var(--gutter) - 12px), calc((100% - 1070px) / 2))); padding-right: 12px; }
   .sub-nav button {
     background: none; border: none; color: var(--muted); font-size: 0.9rem; cursor: pointer;
     padding: 14px 12px; border-bottom: 2px solid transparent; white-space: nowrap; transition: color 0.2s, border-color 0.2s;
@@ -369,7 +375,7 @@
     .home-about-inner, .home-cards, .contact-grid, .form-row,
     .principles-grid, .principles-grid.grid-3, .pricing-grid, .blog-grid { grid-template-columns: 1fr; }
     .quote-block { padding: var(--s3); font-size: 1.2rem; }
-    .home-games { padding-left: 20px; padding-right: 20px; }
+    .home-games, .home-blog, .home-faq { padding-left: 20px; padding-right: 20px; }
     .home-profiles { padding-left: 20px; padding-right: 20px; }
     .profile-grid { grid-template-columns: 1fr; }
     .game-tabs { grid-template-columns: repeat(2, 1fr); }
@@ -615,7 +621,6 @@
   <div class="nav-links">
     <button onclick="showPage('home')" class="active" id="nav-home">Home</button>
     <button onclick="showPage('journey')" id="nav-journey">My Journey</button>
-    <button onclick="showPage('philosophy')" id="nav-philosophy">Philosophy</button>
 
     <!-- ══ DROPDOWN: Improvement ══
          To add a menu item: copy one of the <button> lines below and
@@ -624,6 +629,7 @@
       <button class="nav-dropdown-toggle" id="nav-improvement" aria-haspopup="true" aria-expanded="false" onclick="toggleDropdown(event)">Improvement<span class="caret">▼</span></button>
       <div class="nav-dropdown-menu" role="menu">
         <button role="menuitem" onclick="goToSub('improvement','start')">Start Here</button>
+        <button role="menuitem" onclick="goToSub('improvement','profile')">Your Player Profile</button>
         <button role="menuitem" onclick="goToSub('improvement','areas')">Training Areas</button>
         <hr class="menu-divider">
         <button role="menuitem" onclick="goToSub('improvement','level')">What to Do at Your Level</button>
@@ -637,6 +643,7 @@
       </div>
     </div>
 
+    <button onclick="showPage('blog')" id="nav-blog">Blog</button>
     <button onclick="showPage('coaching')" id="nav-coaching">Coaching</button>
     <button onclick="showPage('contact')" id="nav-contact">Contact</button>
     <a class="nav-main" href="/" title="Back to suhaasnarayanan.com">Main Site</a>
@@ -742,6 +749,63 @@
       <iframe id="game-embed" title="Favorite game, embedded from Lichess" src="https://lichess.org/study/embed/oAqAo3ZN/r3iOWa6i?theme=blue&amp;bg=light" loading="lazy"></iframe>
     </div>
     <a class="game-link" href="https://lichess.org/study/oAqAo3ZN" target="_blank" rel="noopener">See all my favorite games on Lichess</a>
+  </div>
+
+  <!-- Latest posts. Keep the newest two here; the full list is on the Blog page. -->
+  <div class="home-blog">
+    <div class="subsection-label">From the Blog</div>
+    <h2>Latest Writing</h2>
+  <div class="blog-grid">
+    <a class="blog-card" href="blog/three-games.html">
+      <div class="blog-card-header">
+        <h4>Three Games That Got Me to NM</h4>
+      </div>
+      <div class="blog-card-body">
+        <p>A rematch, a draw with a GM, and my first win over an FM, from the run that took me from below 2100 to National Master.</p>
+        <span class="blog-tag">Annotated games</span>
+      </div>
+    </a>
+    <a class="blog-card" href="blog/the-final-push.html">
+      <div class="blog-card-header">
+        <h4>The Final Push</h4>
+      </div>
+      <div class="blog-card-body">
+        <p>What actually contributed to reaching NM? A reflection on the specific changes and mindset shifts that made the difference in the end.</p>
+        <span class="blog-tag">Improvement</span>
+      </div>
+    </a>
+  </div>
+<a class="game-link" href="#blog" onclick="showPage('blog'); return false;">See all posts</a>
+  </div>
+
+  <div class="subsection home-faq" id="sub-home-faq">
+    <div class="subsection-label">Common Questions</div>
+    <h3>Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Who are you? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">I'm a chess enthusiast, player, tournament director, and coach. This website is a way of reflecting on what worked and didn't work for me, in hopes that it can reach others. I want this to be generally comprehensive, and I'll section off subjects to make things easier to digest. Besides chess, I enjoy meditation, climbing, and volleyball.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Who should be reading this? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Primarily aimed at chess players and more specifically improvers. Anyone who's interested in chess should enjoy at least some parts of this guide though. Feel free to skim through and take what you need from this if anything's helpful.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Why are you the authority? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">I'm not! I'd like as much public discussion on this in order to fine-tune it and make it useful. I do have some credibility, having recently achieved NM and being a chess player since I was 4. This means I have more than 20 years of experience across different life stages. I've also digested a variety of information from different sources about improvement and have my own takes on what works and what doesn't.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Can I trust this? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Take everything with a grain of salt and in consideration with your own common sense and the word of others. This largely reflects my opinion and I'll reference when it's something the broader chess community supports. Think of chess literature like academia: everyone does their own research and presents it for feedback. See what works for you.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is this free? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">Yes: no memberships, no paywalls. I benefitted from a variety of free resources online and I'd like to contribute to that. The guide is completely free. Coaching services are separate and listed on the Coaching page.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Will this make a difference? <span class="faq-arrow">▼</span></button>
+      <div class="faq-a">I sure hope so! Even if it's more security in your own beliefs than mine, I think it's important to create dialogue and push on what is known vs. unknown in chess improvement. If there's at least one thing you can take away, that's a win.</div>
+    </div>
   </div>
   <footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
 </div>
@@ -992,58 +1056,45 @@
   <footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
 </div>
 
-<!-- ══ PHILOSOPHY ══ -->
-<div class="page" id="page-philosophy">
+<!-- ══ IMPROVEMENT ══
+     Text adapted from your Google Sites draft (Motivation, Who do I trust?,
+     What Should I Do at My Level?, Opening Study, Prep Work, Communities,
+     Appendix Z) and your "My Resources" doc (training areas, game review,
+     journaling, tournament prep, links). Unwritten topics are under "Coming Soon". -->
+<div class="page" id="page-improvement">
   <div class="section-hero">
-    <h2>Learning <span>Philosophy</span></h2>
-    <p>How I think about chess improvement, and what I've learned teaching others.</p>
+    <h2>Chess <span>Improvement</span></h2>
+    <p>What worked for me, what didn't, and where I'd point you instead.</p>
   </div>
 
-  <div class="sub-nav" id="subnav-philosophy">
-    <button class="active" onclick="scrollToSub('philosophy','principles',event)">Core Principles</button>
-    <button onclick="scrollToSub('philosophy','profile',event)">Your Chess Profile</button>
-    <button onclick="scrollToSub('philosophy','faq',event)">FAQ</button>
-    <button onclick="scrollToSub('philosophy','blog',event)">Writing</button>
+  <div class="sub-nav" id="subnav-improvement">
+    <button class="active" data-sub="start" onclick="scrollToSub('improvement','start',event)">Start Here</button>
+    <button data-sub="profile" onclick="scrollToSub('improvement','profile',event)">Your Profile</button>
+    <button data-sub="areas" onclick="scrollToSub('improvement','areas',event)">Training Areas</button>
+    <button data-sub="level" onclick="scrollToSub('improvement','level',event)">Your Level</button>
+    <button data-sub="review" onclick="scrollToSub('improvement','review',event)">Game Review</button>
+    <button data-sub="openings" onclick="scrollToSub('improvement','openings',event)">Openings</button>
+    <button data-sub="prep" onclick="scrollToSub('improvement','prep',event)">Prep Work</button>
+    <button data-sub="communities" onclick="scrollToSub('improvement','communities',event)">Communities</button>
+    <button data-sub="resources" onclick="scrollToSub('improvement','resources',event)">Resources</button>
+    <button data-sub="upcoming" onclick="scrollToSub('improvement','upcoming',event)">Coming Soon</button>
   </div>
 
   <div class="section-content">
 
-    <div class="subsection" id="sub-philosophy-principles">
-      <div class="subsection-label">The Foundation</div>
-      <h3>Core Principles</h3>
-      <div class="principles-grid grid-3">
-        <div class="principle-card">
-          <h4>Understand, Don't Memorize</h4>
-          <p>Improvement comes from grasping the <em>why</em> behind each move. I teach principles so you can reason through positions you've never seen before.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Learn from Every Game</h4>
-          <p>Losses are your greatest teachers. If you were only 12 losses away from your goal, you'd be excited to lose. Analyze your own games without an engine first. This builds the critical thinking that creates improvement.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Endgames First</h4>
-          <p>Most players neglect endgames. As a coach, I prioritize them because they reveal the true nature of chess: piece activity, king power, and precision. These are fundamentals that flow into every phase.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Consistent, Deliberate Practice</h4>
-          <p>An hour of focused study beats five hours of casual play. I help students build routines that make improvement sustainable over the long run.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Tactics, Tactics, Tactics</h4>
-          <p>Chess is calculation. No matter your level, a daily tactics habit is the highest-ROI training activity there is.</p>
-        </div>
-        <div class="principle-card">
-          <h4>Do What Makes Chess Fun</h4>
-          <p>This is the one takeaway I want for everyone. A rating goal is not an end in itself. You won't enjoy your goal if you hate the process.</p>
-        </div>
+    <div class="subsection" id="sub-improvement-start">
+      <div class="subsection-label">Overview</div>
+      <h3>Start Here</h3>
+      <p>I came back to chess wanting to reach NM for fun and for pride. This guide is part reflection and part giving back. It lays out the structure and methods I used. The ideas are mostly my own unless I cite someone.</p>
+      <div class="info-box">
+        <strong>If you take one thing away:</strong> do what makes chess fun for you. A rating goal shouldn't be an end in itself. I don't regret the training quirks that made the game fun for me, even the ones that weren't "optimal."
       </div>
-      <div class="quote-block">
-        "Improving at chess is about work ethic, inspiration, and optimism. Your approach reflects who you are and the values you live by."
-        <cite>Suhaas Narayanan, NM</cite>
-      </div>
+      <h4 class="sub-h">Who should you trust?</h4>
+      <p>There is no chess god and no scripture. Improvement advice works more like academia: people test ideas and share what they found. Try what's commonly recommended, keep what works for you, and drop what doesn't. That includes everything on this site.</p>
+      <p>It's also worth spending ten minutes on your <a href="#improvement/profile" onclick="scrollToSub('improvement','profile'); return false;">Chess Player Profile</a> (just below) before you pick a plan.</p>
     </div>
 
-    <div class="subsection" id="sub-philosophy-profile">
+    <div class="subsection" id="sub-improvement-profile">
       <div class="subsection-label">Know Thyself</div>
       <h3>Your Chess Player Profile</h3>
       <p>Some say the whole of life is experiencing yourself. It's useful to understand who you are and what you want to get out of chess.</p>
@@ -1080,103 +1131,6 @@
           <figcaption><strong>My style in one position.</strong> Me vs. Shubh Misra, 2026. With 20.b4! I was quite happy to get my queenside majority rolling (engine: +3.6). <a href="https://lichess.org/study/oAqAo3ZN/kKKP2PWU" target="_blank" rel="noopener">Replay the game</a></figcaption>
         </figure>
       </div>
-    </div>
-
-    <div class="subsection" id="sub-philosophy-faq">
-      <div class="subsection-label">Common Questions</div>
-      <h3>Frequently Asked Questions</h3>
-
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Who are you? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">I'm a chess enthusiast, player, tournament director, and coach. This website is a way of reflecting on what worked and didn't work for me, in hopes that it can reach others. I want this to be generally comprehensive, and I'll section off subjects to make things easier to digest. Besides chess, I enjoy meditation, climbing, and volleyball.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Who should be reading this? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">Primarily aimed at chess players and more specifically improvers. Anyone who's interested in chess should enjoy at least some parts of this guide though. Feel free to skim through and take what you need from this if anything's helpful.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Why are you the authority? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">I'm not! I'd like as much public discussion on this in order to fine-tune it and make it useful. I do have some credibility, having recently achieved NM and being a chess player since I was 4. This means I have more than 20 years of experience across different life stages. I've also digested a variety of information from different sources about improvement and have my own takes on what works and what doesn't.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Can I trust this? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">Take everything with a grain of salt and in consideration with your own common sense and the word of others. This largely reflects my opinion and I'll reference when it's something the broader chess community supports. Think of chess literature like academia: everyone does their own research and presents it for feedback. See what works for you.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Is this free? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">Yes: no memberships, no paywalls. I benefitted from a variety of free resources online and I'd like to contribute to that. The guide is completely free. Coaching services are separate and listed on the Coaching page.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Will this make a difference? <span class="faq-arrow">▼</span></button>
-        <div class="faq-a">I sure hope so! Even if it's more security in your own beliefs than mine, I think it's important to create dialogue and push on what is known vs. unknown in chess improvement. If there's at least one thing you can take away, that's a win.</div>
-      </div>
-    </div>
-
-    <div class="subsection" id="sub-philosophy-blog">
-      <div class="subsection-label">More Ideas</div>
-      <h3>Writing</h3>
-      <p>Longer pieces on chess and improvement. More are on the way.</p>
-      <div class="blog-grid">
-        <a class="blog-card" href="blog/three-games.html">
-          <div class="blog-card-header">
-            <h4>Three Games That Got Me to NM</h4>
-          </div>
-          <div class="blog-card-body">
-            <p>A rematch, a draw with a GM, and my first win over an FM, from the run that took me from below 2100 to National Master.</p>
-            <span class="blog-tag">Annotated games</span>
-          </div>
-        </a>
-        <a class="blog-card" href="blog/the-final-push.html">
-          <div class="blog-card-header">
-            <h4>The Final Push</h4>
-          </div>
-          <div class="blog-card-body">
-            <p>What actually contributed to reaching NM? A reflection on the specific changes and mindset shifts that made the difference in the end.</p>
-            <span class="blog-tag">Improvement</span>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </div>
-  <footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
-</div>
-
-<!-- ══ IMPROVEMENT ══
-     Text adapted from your Google Sites draft (Motivation, Who do I trust?,
-     What Should I Do at My Level?, Opening Study, Prep Work, Communities,
-     Appendix Z) and your "My Resources" doc (training areas, game review,
-     journaling, tournament prep, links). Unwritten topics are under "Coming Soon". -->
-<div class="page" id="page-improvement">
-  <div class="section-hero">
-    <h2>Chess <span>Improvement</span></h2>
-    <p>What worked for me, what didn't, and where I'd point you instead.</p>
-  </div>
-
-  <div class="sub-nav" id="subnav-improvement">
-    <button class="active" data-sub="start" onclick="scrollToSub('improvement','start',event)">Start Here</button>
-    <button data-sub="areas" onclick="scrollToSub('improvement','areas',event)">Training Areas</button>
-    <button data-sub="level" onclick="scrollToSub('improvement','level',event)">Your Level</button>
-    <button data-sub="review" onclick="scrollToSub('improvement','review',event)">Game Review</button>
-    <button data-sub="openings" onclick="scrollToSub('improvement','openings',event)">Openings</button>
-    <button data-sub="prep" onclick="scrollToSub('improvement','prep',event)">Prep Work</button>
-    <button data-sub="communities" onclick="scrollToSub('improvement','communities',event)">Communities</button>
-    <button data-sub="resources" onclick="scrollToSub('improvement','resources',event)">Resources</button>
-    <button data-sub="upcoming" onclick="scrollToSub('improvement','upcoming',event)">Coming Soon</button>
-  </div>
-
-  <div class="section-content">
-
-    <div class="subsection" id="sub-improvement-start">
-      <div class="subsection-label">Overview</div>
-      <h3>Start Here</h3>
-      <p>I came back to chess wanting to reach NM for fun and for pride. This guide is part reflection and part giving back. It lays out the structure and methods I used. The ideas are mostly my own unless I cite someone.</p>
-      <div class="info-box">
-        <strong>If you take one thing away:</strong> do what makes chess fun for you. A rating goal shouldn't be an end in itself. I don't regret the training quirks that made the game fun for me, even the ones that weren't "optimal."
-      </div>
-      <h4 class="sub-h">Who should you trust?</h4>
-      <p>There is no chess god and no scripture. Improvement advice works more like academia: people test ideas and share what they found. Try what's commonly recommended, keep what works for you, and drop what doesn't. That includes everything on this site.</p>
-      <p>It's also worth spending ten minutes on your <a href="#philosophy/profile" onclick="goToSub('philosophy','profile'); return false;">Chess Player Profile</a> before you pick a plan.</p>
     </div>
 
     <div class="subsection" id="sub-improvement-areas">
@@ -1414,6 +1368,47 @@
   <footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
 </div>
 
+<!-- ══ BLOG ══
+     To add a post: put the page in the blog/ folder, then copy one of the
+     <a class="blog-card"> blocks below to the TOP of the list (newest first).
+     Also add it to the "From the Blog" cards on Home. -->
+<div class="page" id="page-blog">
+  <div class="section-hero">
+    <h2>Chess <span>Blog</span></h2>
+    <p>Annotated games, reflections, and longer pieces on chess improvement. Newest first.</p>
+  </div>
+
+  <div class="section-content">
+
+    <div class="subsection" id="sub-blog-posts">
+      <div class="subsection-label">All Posts</div>
+      <h3>Writing</h3>
+      <div class="blog-grid">
+        <a class="blog-card" href="blog/three-games.html">
+          <div class="blog-card-header">
+            <h4>Three Games That Got Me to NM</h4>
+          </div>
+          <div class="blog-card-body">
+            <p>A rematch, a draw with a GM, and my first win over an FM, from the run that took me from below 2100 to National Master.</p>
+            <span class="blog-tag">Annotated games</span>
+          </div>
+        </a>
+        <a class="blog-card" href="blog/the-final-push.html">
+          <div class="blog-card-header">
+            <h4>The Final Push</h4>
+          </div>
+          <div class="blog-card-body">
+            <p>What actually contributed to reaching NM? A reflection on the specific changes and mindset shifts that made the difference in the end.</p>
+            <span class="blog-tag">Improvement</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
+</div>
+
 <!-- ══ COACHING ══ -->
 <div class="page" id="page-coaching">
   <div class="section-hero">
@@ -1424,6 +1419,7 @@
   <div class="sub-nav" id="subnav-coaching">
     <button class="active" onclick="scrollToSub('coaching','packages',event)">Packages</button>
     <button onclick="scrollToSub('coaching','approach',event)">My Approach</button>
+    <button onclick="scrollToSub('coaching','principles',event)">Principles</button>
     <button onclick="scrollToSub('coaching','experience',event)">Experience</button>
     <button onclick="scrollToSub('coaching','testimonials',event)">Testimonials</button>
   </div>
@@ -1509,6 +1505,41 @@
           <h4>Shared Opening Files</h4>
           <p>I build opening prep with you in a shared Lichess study: like ChessBase, but free, and we can update it together in real time. Homework and other resources come through these too.</p>
         </div>
+      </div>
+    </div>
+
+    <div class="subsection" id="sub-coaching-principles">
+      <div class="subsection-label">The Foundation</div>
+      <h3>Core Principles</h3>
+      <div class="principles-grid grid-3">
+        <div class="principle-card">
+          <h4>Understand, Don't Memorize</h4>
+          <p>Improvement comes from grasping the <em>why</em> behind each move. I teach principles so you can reason through positions you've never seen before.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Learn from Every Game</h4>
+          <p>Losses are your greatest teachers. If you were only 12 losses away from your goal, you'd be excited to lose. Analyze your own games without an engine first. This builds the critical thinking that creates improvement.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Endgames First</h4>
+          <p>Most players neglect endgames. As a coach, I prioritize them because they reveal the true nature of chess: piece activity, king power, and precision. These are fundamentals that flow into every phase.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Consistent, Deliberate Practice</h4>
+          <p>An hour of focused study beats five hours of casual play. I help students build routines that make improvement sustainable over the long run.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Tactics, Tactics, Tactics</h4>
+          <p>Chess is calculation. No matter your level, a daily tactics habit is the highest-ROI training activity there is.</p>
+        </div>
+        <div class="principle-card">
+          <h4>Do What Makes Chess Fun</h4>
+          <p>This is the one takeaway I want for everyone. A rating goal is not an end in itself. You won't enjoy your goal if you hate the process.</p>
+        </div>
+      </div>
+      <div class="quote-block">
+        "Improving at chess is about work ethic, inspiration, and optimism. Your approach reflects who you are and the values you live by."
+        <cite>Suhaas Narayanan, NM</cite>
       </div>
     </div>
 
@@ -1612,7 +1643,26 @@
   // Update the address bar without breaking if the browser refuses (e.g. in previews)
   function pushHash(state, title, url) { try { history.pushState(state, title, url); } catch (_) {} }
 
-  const VALID_PAGES = ['home', 'journey', 'philosophy', 'improvement', 'coaching', 'contact'];
+  const VALID_PAGES = ['home', 'journey', 'improvement', 'blog', 'coaching', 'contact'];
+
+  // Old links from before the Philosophy page was split up (Oct 2026) still land in the right place
+  const MOVED = {
+    'philosophy': 'blog',
+    'philosophy/blog': 'blog',
+    'philosophy/principles': 'coaching/principles',
+    'philosophy/profile': 'improvement/profile',
+    'philosophy/faq': 'home/faq'
+  };
+  function resolveHash(hash) {
+    if (MOVED[hash]) {
+      hash = MOVED[hash];
+      try { history.replaceState(null, '', '#' + hash); } catch (_) {}
+    } else if (hash.startsWith('philosophy/')) {
+      hash = 'blog';
+      try { history.replaceState(null, '', '#blog'); } catch (_) {}
+    }
+    return hash.split('/');
+  }
 
   // Which subsection a section-menu button points to
   function subOf(btn) {
@@ -1701,7 +1751,7 @@
   // Handle browser back/forward
   window.addEventListener('popstate', function (e) {
     const s = e.state || {};
-    const [page, sub] = s.page ? [s.page, s.sub] : (location.hash.slice(1) || 'home').split('/');
+    const [page, sub] = s.page ? [s.page, s.sub] : resolveHash(location.hash.slice(1) || 'home');
     if (!VALID_PAGES.includes(page)) return;
     if (sub) goToSub(page, sub, false); else showPage(page, false);
   });
@@ -1710,7 +1760,7 @@
   (function () {
     const hash = window.location.hash.slice(1);
     if (!hash) return;
-    const [page, sub] = hash.split('/');
+    const [page, sub] = resolveHash(hash);
     if (!VALID_PAGES.includes(page)) return;
     if (!sub) { showPage(page, false); return; }
     goToSub(page, sub, false);
