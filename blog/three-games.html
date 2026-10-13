@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Games That Got Me to NM · Suhaas Narayanan</title>
+<meta name="description" content="Three annotated games from Suhaas Narayanan's climb from below 2100 to National Master: a rematch at the Colorado Class, a draw with GM Max Dlugy, and a first win over an FM.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Three Games That Got Me to NM · Suhaas Narayanan">
+<meta property="og:description" content="A rematch, a GM draw, and a first win over an FM, with my notes from each game.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://suhaasnarayanan.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Suhaas Narayanan, USCF National Master and coach">
+<meta name="twitter:image" content="https://suhaasnarayanan.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://suhaasnarayanan.com/chess/blog/three-games.html">
+<link rel="canonical" href="https://suhaasnarayanan.com/chess/blog/three-games.html">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  /* Same design tokens as the main chess site */
+  :root {
+    --navy: #13284a; --ink: #1b2636; --muted: #536175; --blue: #1f4e8c;
+    --blue-on-navy: #a9c4ec; --band: #f2f6fb; --callout: #e2eaf6; --line: #d9e1ec; --white: #ffffff;
+    --serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    --sans: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --content: 680px;
+    --gutter: max(24px, calc((100% - var(--content)) / 2));
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); font-size: 1.0625rem; line-height: 1.7; color: var(--ink); background: var(--white); -webkit-font-smoothing: antialiased; }
+  a { color: var(--blue); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { color: var(--navy); }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--navy); line-height: 1.2; text-wrap: balance; }
+
+  nav { height: 68px; padding: 0 max(24px, calc((100% - 1120px) / 2)); display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); background: var(--white); }
+  .nav-logo { font-family: var(--serif); font-size: 1.25rem; color: var(--navy); text-decoration: none; }
+  .nav-back { font-size: 0.95rem; color: var(--muted); text-decoration: none; }
+  .nav-back:hover { color: var(--navy); }
+
+  header { border-bottom: 3px solid #b08d57; background: var(--navy); color: var(--white); padding: 72px var(--gutter) 48px; }
+  .label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-on-navy); margin-bottom: 16px; }
+  header h1 { font-size: 2.75rem; color: var(--white); letter-spacing: -0.01em; }
+  header h1 em { color: var(--blue-on-navy); }
+  header p { color: rgba(255, 255, 255, 0.78); font-size: 1.15rem; margin-top: 16px; max-width: 60ch; }
+  .byline { font-size: 0.9rem; color: rgba(255, 255, 255, 0.6) !important; margin-top: 20px !important; }
+
+  article { padding: 56px var(--gutter) 72px; }
+  article p { margin-bottom: 18px; color: var(--ink); }
+  article h2 { font-size: 1.75rem; margin: 48px 0 16px; }
+  article h2:first-child { margin-top: 0; }
+  article ul { list-style: none; margin: 0 0 24px; }
+  article li { position: relative; padding: 10px 0 10px 22px; border-bottom: 1px solid var(--line); }
+  article li:last-child { border-bottom: none; }
+  article li::before { content: ''; position: absolute; left: 2px; top: 22px; width: 6px; height: 6px; background: var(--blue); }
+  article li strong, article p strong { color: var(--navy); font-weight: 600; }
+
+  .timeline { position: relative; padding-left: 28px; margin: 8px 0 32px; }
+  .timeline::before { content: ''; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 1px; background: var(--line); }
+  .t-item { position: relative; margin-bottom: 28px; }
+  .t-item:last-child { margin-bottom: 0; }
+  .t-item::before { content: ''; position: absolute; left: -28px; top: 7px; width: 9px; height: 9px; background: var(--blue); }
+  .t-when { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); }
+  .t-item h3 { font-size: 1.25rem; margin: 2px 0 6px; }
+  .t-item p { margin: 0; color: var(--muted); }
+
+  .callout { background: var(--callout); padding: 24px; border-radius: 4px; margin: 28px 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  .quote { border-left: 4px solid #b08d57; background: var(--navy); color: var(--white); padding: 32px; border-radius: 4px; font-family: var(--serif); font-style: italic; font-size: 1.35rem; line-height: 1.5; margin: 32px 0; }
+
+  .end-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 4px; font-weight: 600; text-decoration: none; }
+  .btn-primary { background: var(--navy); color: var(--white); }
+  .btn-primary:hover { background: var(--blue); color: var(--white); }
+  .btn-secondary { border: 1px solid var(--navy); color: var(--navy); }
+  .btn-secondary:hover { background: var(--band); }
+
+  footer { border-top: 3px solid #b08d57; background: var(--navy); color: rgba(255, 255, 255, 0.55); text-align: center; padding: 24px; font-size: 0.875rem; }
+  footer span { color: var(--white); }
+  footer a { color: var(--white); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    header { padding: 48px 20px 36px; }
+    header h1 { font-size: 2.1rem; }
+    article { padding: 40px 20px 56px; }
+    article h2 { font-size: 1.5rem; }
+    .quote { padding: 24px; font-size: 1.2rem; }
+  }
+
+  /* Game sections */
+  .run { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 8px 0 32px; }
+  .run div { background: var(--band); border-radius: 4px; padding: 12px; }
+  .run b { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.4rem; color: var(--navy); line-height: 1.1; }
+  .run span { font-size: 0.8rem; color: var(--muted); line-height: 1.3; display: block; margin-top: 4px; }
+  .game-head { border-top: 3px solid #b08d57; padding-top: 20px; margin-top: 56px; }
+  .game-head .t-when { display: block; margin-bottom: 4px; }
+  .game-head h2 { margin: 0 0 8px; }
+  .game-meta { font-size: 0.95rem; color: var(--muted); margin-bottom: 20px !important; }
+  .board-embed { margin: 24px 0 8px; }
+  .board-embed iframe { width: 100%; aspect-ratio: 600 / 397; border: 0; border-radius: 4px; background: var(--band); }
+  .embed-note { font-size: 0.85rem; color: var(--muted); }
+  article h3 { font-size: 1.2rem; margin: 32px 0 12px; }
+  .moves { list-style: none; margin: 0 0 24px; }
+  .moves li { padding: 14px 0 14px 0 !important; }
+  .moves li::before { display: none; }
+  .mv { display: inline-block; font-weight: 600; color: var(--navy); background: var(--band); border-radius: 3px; padding: 1px 8px; margin-right: 8px; font-variant-numeric: tabular-nums; }
+  figure.diagram { margin: 20px 0 8px; max-width: 420px; }
+  figure.diagram img { width: 100%; height: auto; display: block; border-radius: 4px; }
+  figure.diagram figcaption { font-size: 0.85rem; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  .takeaway { background: var(--callout); padding: 20px 24px; border-radius: 4px; margin: 24px 0; }
+  .takeaway p:last-child { margin-bottom: 0; }
+  /* Draft only: text Claude wrote, for Suhaas to edit */
+  .ai { background: #fff2b3; box-shadow: 0 0 0 2px #fff2b3; border-radius: 2px; }
+  .draft-banner { background: #fff2b3; color: #5c4a00; padding: 12px 20px; font-size: 0.9rem; text-align: center; }
+  @media (max-width: 640px) { .run { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
+</head>
+<body>
+<div class="draft-banner">Draft: highlighted text was written by Claude. Everything else is from Suhaas's own notes, lightly edited.</div>
+<nav>
+  <a class="nav-logo" href="../">Suhaas Narayanan</a>
+  <a class="nav-back" href="../#philosophy/blog">← All writing</a>
+</nav>
+
+<header>
+  <div class="label">Annotated games</div>
+  <h1>Three Games That <em>Got Me to NM</em></h1>
+  <p>A rematch, a draw with a GM, and my first win over an FM, from the run that took me from below 2100 to National Master.</p>
+  <p class="byline">By Suhaas Narayanan, NM</p>
+</header>
+
+<article>
+  <p>After my comeback to chess, my rating peaked at 2146. Then I went back to university and chess slid down my priority list. My decline started at the Penn Fall Swiss that October, and a rough winter break and a bad Liberty Bell Open dropped me below 2100.</p>
+  <p>That was the moment I had to be honest with myself. I wasn't going to reach National Master by doing more of the same, so I changed how I trained. I finished the Woodpecker Method, narrowed my repertoire, focused on one or two things at a time, played training games with lots of review, and played for wins instead of perfect games.</p>
+  <p><span class="ai">I wrote about those changes in <a href="../#journey/push">The Final Push</a>. This is the other half: three games from the climb back up, with the notes I wrote after each one. They aren't my cleanest games, but they're the ones where I can see the changes working, and where I can still see the habits that almost cost me.</span></p>
+
+  <div class="run" aria-label="Regular rating during the climb">
+    <div><b>2084</b><span>Jan 2025, Liberty Bell Open</span></div>
+    <div><b>2113</b><span>May 2025, Colorado Class</span></div>
+    <div><b>2152</b><span>Jun 2025, Philly Open</span></div>
+    <div><b>2187</b><span>Aug 2025, Denver</span></div>
+    <div><b>2203</b><span>Oct 2025, National Master</span></div>
+  </div>
+
+  <!-- GAME 1 -->
+  <div class="game-head">
+    <span class="t-when">Game 1</span>
+    <h2>The rematch</h2>
+    <p class="game-meta">Suhaas Narayanan (2084) vs. Richard Shtivelband (2208) · Colorado Class Championships, round 4 · May 2025 · 1-0</p>
+  </div>
+  <p>This was my grudge match against Richard after losing to him in the first round. Despite a strong position in that game, I got into serious time trouble and threw it away. This time, I knew I was going to keep up the pressure. Since it was four players and four rounds, this was a playoff between 1st and 2nd, and after losing in the first round it was nice to get some revenge.</p>
+  <p>I missed some critical moments to really take control, with my bad habit of settling for smaller advantages, but I kept up the pressure. Despite some complications in the endgame, I ended up cleaning up.</p>
+
+  <div class="board-embed"><iframe src="https://lichess.org/study/embed/oAqAo3ZN/67rWINLT?theme=blue&amp;bg=light" title="Narayanan vs. Shtivelband, with my annotations" loading="lazy"></iframe></div>
+  <p class="embed-note">Step through the full game with all my notes and variations, or <a href="https://lichess.org/study/oAqAo3ZN/67rWINLT" target="_blank" rel="noopener">open it on Lichess</a>.</p>
+
+  <h3>Key moments</h3>
+  <ul class="moves">
+    <li><span class="mv">2...e6</span>I wasn't expecting this and had a decision to make: g3 for a Catalan, or Nc3 heading into a Nimzo or the Exchange Variation. Recently I've focused more on the Exchange Variation for both colors, so I felt comfortable going into that, and I wanted to avoid all the possible Catalan setups.</li>
+    <li><span class="mv">9...O-O</span>Just getting a game here. I once had a training game like this where a minority attack worked out well enough, so I wasn't too bothered. Black is probably about equal, but it's just a regular Carlsbad.</li>
+    <li><span class="mv">17.e4!</span>Now I've blown up the entire position, and my light-squared bishop and pieces are better placed. Black has more active rooks, but I felt confident that White was better.</li>
+    <li><span class="mv">20.Qb3</span>Under one hour now, and much better time management than in my last three games. I still got into time trouble later, but it was much better regardless.</li>
+    <li><span class="mv">22.Bxh7+?</span>My intended plan. The engine says 22.Nc7 was much better, and I realized that afterwards too.</li>
+    <li><span class="mv">28.h4</span>28.Qxf4 was maybe more natural here. I got scared off by some ...Rf8 ideas, even though I knew I had Ne6. A lack of objectivity in my calculations was a problem here.</li>
+    <li><span class="mv">30...Re2!</span>After 30.Nf5 I thought it was over. My opponent also thought so and was ready to resign, but he found 30...Re2!, keeping the game afloat. This definitely threw me off after I thought I was forcibly winning, and I sank a lot of time here. I settled on 31.Qf3, but maybe it isn't best. Now I'm down to three minutes.</li>
+  </ul>
+  <figure class="diagram">
+    <img src="../images/positions/shtivelband.svg" width="480" height="480" loading="lazy" alt="Chess diagram after 30...Re2. White: Kg1, Qf4, Rb1, Re1, Nf5, Ng5, pawns d4, f2, g2, h4. Black: Kg8, Qg6, Ra2, Re2, Nd7, Nf6, pawns d5, g7.">
+    <figcaption><strong>After 30...Re2!</strong> I was under 10 minutes and sure I was forcibly winning. Then this.</figcaption>
+  </figure>
+  <ul class="moves">
+    <li><span class="mv">52...Ne4!</span>I had missed this idea from afar, and now ...Qg3 is threatened with ...Ne6 on the way.</li>
+    <li><span class="mv">53.Nf5!</span>Holds everything together.</li>
+    <li><span class="mv">55.Ne7+!</span>And Black resigned because of 55...Kh8 56.Nf7#.</li>
+  </ul>
+  <div class="takeaway"><p><span class="ai"><strong>What changed:</strong> the opening was one I'd actually narrowed down to, and my time management was much better than in the first-round loss. <strong>What didn't:</strong> I settled for the smaller advantage (22.Bxh7+ instead of 22.Nc7) and second-guessed a calculation I had right (28.h4 instead of 28.Qxf4). That's how a winning position turned into a three-minute scramble.</span></p></div>
+
+  <!-- GAME 2 -->
+  <div class="game-head">
+    <span class="t-when">Game 2</span>
+    <h2>Drawing a GM</h2>
+    <p class="game-meta">GM Max Dlugy (2603) vs. Suhaas Narayanan (2099) · Philadelphia Open, round 5 · June 2025 · 1/2-1/2</p>
+  </div>
+  <p>The Philly Open was likely my best event: a draw, then three straight wins (two of them near-perfect games against 2000+ players), then a final-round draw with GM Maxim Dlugy as Black. I ended up tying for 3rd despite a strong field of GMs and other titled players.</p>
+  <p>This was my first result against a GM, after previously losing to GM Joel Benjamin at the US Open. A draw here really validated a lot of my chess, that I had the strength to rival people at the highest level. I always had this issue of wondering why I'm doing something I'm at a low level at, but this gave me a lot of strength.</p>
+  <p>Now, I will say this game isn't pretty. I built up and squandered an opening advantage as Black. He outplays me but misses some critical ideas to cement his advantage at a few points. Then a natural but slow move like Qc3 lets everything trade off, and I hunt down the draw.</p>
+
+  <div class="board-embed"><iframe src="https://lichess.org/study/embed/oAqAo3ZN/r3iOWa6i?theme=blue&amp;bg=light" title="Dlugy vs. Narayanan, with my annotations" loading="lazy"></iframe></div>
+  <p class="embed-note">Step through the full game with all my notes and variations, or <a href="https://lichess.org/study/oAqAo3ZN/r3iOWa6i" target="_blank" rel="noopener">open it on Lichess</a>.</p>
+
+  <h3>Key moments</h3>
+  <ul class="moves">
+    <li><span class="mv">2.Bf4</span>I saw he played the London only online and in some tournament games, so I prepped my London line better this time.</li>
+    <li><span class="mv">10...Ng7</span>He later said this was a smarter move order than ...O-O first, which Oparin played against him in the World Blitz.</li>
+    <li><span class="mv">11...Nf5</span>He deviated here and I was trying to figure out my lines. I was deciding between ...O-O, ...f5, and ...Nf5. I figured ...Nf5 leads to some favorable trades and is more forcing.</li>
+    <li><span class="mv">21...e5</span>I offered a draw here, lol. This was the strongest my position got all game too. He played 22.Nc2 quickly, though.</li>
+  </ul>
+  <figure class="diagram">
+    <img src="../images/positions/dlugy.svg" width="480" height="480" loading="lazy" alt="Chess diagram from Black's side after 21...e5 in Dlugy vs. Narayanan.">
+    <figcaption><strong>After 21...e5</strong> (engine: -0.6), from Black's side. I offered a draw here.</figcaption>
+  </figure>
+  <ul class="moves">
+    <li><span class="mv">22...Be8</span>I tried to do too much in this middlegame after getting this setup. I should've played it more like a usual QGD Exchange, where White can sit behind the strong center, maneuver, and take their time.</li>
+    <li><span class="mv">25...e4?!</span>A self-inflicted inaccuracy. Now White gets the initiative after I lock things up and release the tension. I should've looked at 25...exd4 more concretely. I rushed into ...e4 without understanding my follow-ups.</li>
+    <li><span class="mv">32...b5!?</span>Probably overambitious. I like that I played to fight here, but this was probably too much. I thought I still had the advantage, but I should've started hunkering down and laying low.</li>
+    <li><span class="mv">35.a3</span>And I start realizing I'm in big trouble now, because ...Nc4 doesn't work well anymore.</li>
+    <li><span class="mv">38.Rh7?</span><span class="ai">The engine's c4 break wins for White here (38.c4!!), and it was there on moves 37 and 39 too. He misses it all three times.</span></li>
+    <li><span class="mv">45...Rxb4??</span>I wanted to play 45...Bb5! here, but I got scared off by all the tactics and complications with d5. And 46.Nc2! I missed completely, for whatever reason.</li>
+    <li><span class="mv">47...Qc8?</span>47...Ne5! was the key difference. I didn't believe in this variation and didn't calculate it correctly at all.</li>
+    <li><span class="mv">48.Qc3?!</span>His big mistake in the game. It quickly liquidates to an equal endgame from here.</li>
+    <li><span class="mv">48...Bd7!</span>With a huge sigh of relief now. It all goes smoothly into the draw from here.</li>
+    <li><span class="mv">60...Nxc2</span>Black has some chances here, but I just wanted my draw.</li>
+    <li><span class="mv">99.Kb6</span>I just drew a GM!</li>
+  </ul>
+  <div class="takeaway"><p><span class="ai"><strong>What changed:</strong> I had prepped his London, and the opening went exactly to plan. <strong>What didn't:</strong> once I had the advantage, I tried to do too much (25...e4, 32...b5) instead of playing it like the QGD Exchange structures I know. I held on because I kept fighting, and because he missed 38.c4.</span></p></div>
+
+  <!-- GAME 3 -->
+  <div class="game-head">
+    <span class="t-when">Game 3</span>
+    <h2>My first win over an FM</h2>
+    <p class="game-meta">FM Gunnar Andersen (2381) vs. Suhaas Narayanan (2155) · Invitational in Denver, round 2 · August 2025 · 0-1</p>
+  </div>
+  <p>The first time I beat an FM. I've known Gunnar, Colorado's current strongest player, since I was a kid, and I actually had a positive score against him after a lucky win in the CO Closed around 2014. I had struggled to beat NMs recently, and I was losing a bit of confidence here. Gunnar tried to get away with too much, giving up a nice opening advantage, and I eventually punished him after giving him a chance to get out.</p>
+
+  <div class="board-embed"><iframe src="https://lichess.org/study/embed/oAqAo3ZN/hgJHRFfv?theme=blue&amp;bg=light" title="Andersen vs. Narayanan, with my annotations" loading="lazy"></iframe></div>
+  <p class="embed-note">Step through the full game with all my notes and variations, or <a href="https://lichess.org/study/oAqAo3ZN/hgJHRFfv" target="_blank" rel="noopener">open it on Lichess</a>.</p>
+
+  <h3>Key moments</h3>
+  <ul class="moves">
+    <li><span class="mv">7...Nc6</span>This all follows my KIA line.</li>
+    <li><span class="mv">12...a4</span>The key point of this line, trying to break through with ...a3.</li>
+    <li><span class="mv">15...c4?!</span>The big mistake here. Black doesn't get much play from this break, and it's too panicky a reaction on the queenside.</li>
+    <li><span class="mv">16.Nxd5!?</span>I just did not see this coming at all. A nice tactic to break everything open. In my head, I was so preoccupied with h5, ...h6, Ng4 and so on. 17.e6 is the point.</li>
+    <li><span class="mv">20.Qe8??</span>I saw this move ahead of time but figured it didn't do anything. Then he played it, and I was still sure it didn't do anything. I trusted him too much here, and instead of snap-taking on c2, I played 20...Rd8 to be "safe," which lets White back into the game with either Qe3 or cxd3. Thankfully, he compounded his error.</li>
+    <li><span class="mv">21.Bh3??</span>Compounding the error. Now I couldn't let this slide. After 21...dxc2!, White has a lot of active pieces but not enough compensation.</li>
+  </ul>
+  <figure class="diagram">
+    <img src="../images/positions/gunnar.svg" width="480" height="480" loading="lazy" alt="Chess diagram from Black's side after 21.Bh3 dxc2 in Andersen vs. Narayanan.">
+    <figcaption><strong>After 21.Bh3? dxc2!</strong> (engine: -4.2), from Black's side. Black is winning.</figcaption>
+  </figure>
+  <ul class="moves">
+    <li><span class="mv">24.Re6</span>I spent way too much time trying to figure out if ...fxe6 was better.</li>
+    <li><span class="mv">25...Kh8!</span>The key idea holding my position together. 25...Rxf7?? loses to 26.Re8+ Rf8 27.Be6+ Kh8 28.Nf7+ and mate.</li>
+    <li><span class="mv">27...Qxe1+!</span>Necessary and strong.</li>
+    <li><span class="mv">35.Qe6??</span>With a clean conversion, helped by this.</li>
+  </ul>
+  <div class="takeaway"><p><span class="ai"><strong>What changed:</strong> Woodpecker. The tactics in this game came fast, and I saw ...Kh8 and ...Qxe1+ when it mattered. <strong>What didn't:</strong> I trusted my opponent over my own analysis on move 20, and it almost let him off the hook.</span></p></div>
+
+  <h2>What the three games have in common</h2>
+  <p><span class="ai">Reading my notes back, the same few things keep coming up. In my own words, from these games:</span></p>
+  <ul>
+    <li><strong><span class="ai">Settling.</span></strong> "My bad habit of settling for smaller advantages." <span class="ai">In the Shtivelband game, 22.Nc7 was much stronger than the plan I'd committed to.</span></li>
+    <li><strong><span class="ai">Doing too much.</span></strong> "I tried to do too much in this middlegame after getting this setup." <span class="ai">Against Dlugy, the advantage came from playing simply, and it went away when I stopped.</span></li>
+    <li><strong><span class="ai">Not trusting my calculation.</span></strong> "A lack of objectivity in my calculations was a problem here," and "I trusted him too much." <span class="ai">Twice, I had the right idea and talked myself out of it.</span></li>
+    <li><strong><span class="ai">Time.</span></strong> "Much better time management than in my last three games." <span class="ai">Better, not fixed: I still ended the Shtivelband game with three minutes.</span></li>
+  </ul>
+  <p><span class="ai">None of these games is clean. But in all three I had an opening I understood, I kept fighting when it went wrong, and I knew what to look for when I reviewed them afterward. That's most of what changed.</span></p>
+
+  <h2>2203</h2>
+  <p>I left for Penn at 2187 and played regular local quads. Funnily enough, I took an early draw as Black in a position that was -5 in my favor, and got stuck at 2199.29. Finally I won a first-round game against an 1890 at the Penn Fall Swiss, withdrew, and finished at 2203. In another twist of fate, the Penn Fall Swiss is where my rating decline had started. It all came full circle.</p>
+  <div class="quote">NM really is the friends we made along the way.</div>
+  <p>I'm grateful for every training partner, opponent, coach, and friend who made it worth it. If you're on your own path to a goal like this, I hope something here helps. All of these games and a few more are in my <a href="https://lichess.org/study/oAqAo3ZN" target="_blank" rel="noopener">My 60 study on Lichess</a>.</p>
+
+  <div class="end-links">
+    <a class="btn btn-primary" href="../#journey/push">Read The Final Push</a>
+    <a class="btn btn-secondary" href="../#coaching">See coaching</a>
+  </div>
+</article>
+
+<footer>© 2026 <a href="/">Suhaas Narayanan</a></footer>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac4439d40705499ab789aa120376ae2f"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
