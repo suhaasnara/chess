@@ -56,6 +56,9 @@
     --callout: #e2eaf6;     /* callout boxes */
     --line: #d9e1ec;        /* thin dividing lines */
     --white: #ffffff;
+    --brass: #b08d57;       /* shared accent with the main site (suhaasnarayanan.com) */
+    --brass-light: #cfb27e; /* brass on navy */
+    --brass-text: #8a6a35;  /* brass for small text on white */
 
     /* Type */
     --serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
@@ -591,6 +594,17 @@
     .om-pt { font-size: 0.75rem; }
     .mx-cell { padding: var(--s2); }
   }
+
+  /* Brass details: the accent shared with the main site */
+  .hero, .section-hero { border-bottom: 3px solid var(--brass); }
+  .quote-block { border-left: 4px solid var(--brass); }
+  .quote-block cite { color: var(--brass-light); }
+  .title-badge { background: var(--brass); color: var(--navy); }
+  .rc-num { background: var(--brass-text); }
+  .rc-ms-dot { fill: var(--brass-text); }
+  .nav-main:hover { color: var(--brass-text); }
+  footer { border-top: 3px solid var(--brass); }
+  ::selection { background: #eadcbf; }
 </style>
 </head>
 <body>
@@ -755,7 +769,7 @@
     <div class="subsection" id="sub-journey-rating">
       <div class="subsection-label">By the Numbers</div>
       <h3>My US Chess Rating</h3>
-      <p>Every rated tournament I've played since 2009, from the US Chess records. Hover over or tap the line to see each event.</p>
+      <p>Every rated tournament I've played since 2009, from the US Chess records. Hover over or tap the line to see each event. <a href="/projects/chess-ratings/">How I built this chart</a>.</p>
       <div class="rc-stats">
         <div class="rc-stat"><span class="rc-stat-n">2228</span><span class="rc-stat-l">Current regular rating</span></div>
         <div class="rc-stat"><span class="rc-stat-n">2231</span><span class="rc-stat-l">Career high, Feb 2026</span></div>
