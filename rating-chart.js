@@ -235,6 +235,17 @@
     }).join('');
     const cnt = document.getElementById('rating-table-count');
     if (cnt) cnt.textContent = rows.length;
+    // Headline stats, so they stay current when the data file updates
+    const set = (id, v) => { const n = document.getElementById(id); if (n && v != null) n.textContent = v; };
+    const reg = rows.filter(r => r.r != null);
+    if (reg.length) {
+      const hi = reg.reduce((a, b) => (b.r > a.r ? b : a));
+      set('rc-cur', (data.current && data.current.r) || reg[reg.length - 1].r);
+      set('rc-high', hi.r);
+      set('rc-high-l', 'Career high, ' + fmtMonth(hi.d));
+    }
+    set('rc-events', new Set(rows.map(r => r.d + '|' + r.e)).size);
+    if (data.asOf) set('rc-asof', fmtDate(data.asOf));
   }
 
   function syncChips() {

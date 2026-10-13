@@ -771,10 +771,10 @@
       <h3>My US Chess Rating</h3>
       <p>Every rated tournament I've played since 2009, from the US Chess records. Hover over or tap the line to see each event. <a href="/projects/chess-ratings/">How I built this chart</a>.</p>
       <div class="rc-stats">
-        <div class="rc-stat"><span class="rc-stat-n">2228</span><span class="rc-stat-l">Current regular rating</span></div>
-        <div class="rc-stat"><span class="rc-stat-n">2231</span><span class="rc-stat-l">Career high, Feb 2026</span></div>
+        <div class="rc-stat"><span class="rc-stat-n" id="rc-cur">2228</span><span class="rc-stat-l">Current regular rating</span></div>
+        <div class="rc-stat"><span class="rc-stat-n" id="rc-high">2231</span><span class="rc-stat-l" id="rc-high-l">Career high, Feb 2026</span></div>
         <div class="rc-stat"><span class="rc-stat-n">Oct 2025</span><span class="rc-stat-l">Became a National Master</span></div>
-        <div class="rc-stat"><span class="rc-stat-n">174</span><span class="rc-stat-l">Rated tournaments</span></div>
+        <div class="rc-stat"><span class="rc-stat-n" id="rc-events">174</span><span class="rc-stat-l">Rated tournaments</span></div>
       </div>
       <div class="rating-chart" id="rating-chart" data-src="data/uscf-history.json">
         <div class="rc-chips" role="group" aria-label="Rating types shown">
@@ -796,7 +796,7 @@
           </table>
         </div>
       </details>
-      <p class="rc-source">Source: <a href="https://ratings.uschess.org/player/14290675" target="_blank" rel="noopener">US Chess ratings, member 14290675</a>. Includes results through May 9, 2026.</p>
+      <p class="rc-source">Source: <a href="https://ratings.uschess.org/player/14290675" target="_blank" rel="noopener">US Chess ratings, member 14290675</a>. Includes results through <span id="rc-asof">May 9, 2026</span> and updates automatically.</p>
     </div>
 
     <div class="subsection" id="sub-journey-early">
@@ -1796,7 +1796,7 @@
     }
   }
 </script>
-<script src="rating-chart.js?v=2" defer></script>
+<script src="rating-chart.js?v=3" defer></script>
 <script src="visuals.js?v=2" defer></script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac4439d40705499ab789aa120376ae2f"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
