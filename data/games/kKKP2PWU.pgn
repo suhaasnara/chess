@@ -1,0 +1,69 @@
+[Event "Hive5 Wednesday"]
+[Date "2026.04.01"]
+[Round "1"]
+[White "Narayanan, Suhaas"]
+[Black "Misra, Shubh"]
+[Result "1-0"]
+[WhiteElo "2214"]
+[BlackElo "1980"]
+[Variant "Standard"]
+[ECO "B30"]
+[Opening "Sicilian Defense: Nyezhmetdinov-Rossolimo Attack"]
+[StudyName "0. Public My 60 - Suhaas N."]
+[ChapterName "Narayanan, Suhaas - Misra, Shubh"]
+[ChapterURL "https://lichess.org/study/oAqAo3ZN/kKKP2PWU"]
+[Annotator "https://lichess.org/@/suhaasn"]
+[Orientation "white"]
+
+1. e4 { [%eval 0.18] } 1... c5 { [%eval 0.32] } 2. Nf3 { [%eval 0.2] } 2... Nc6 { [%eval 0.3] } (2... e6) 3. Bb5 { [%eval 0.17] } 3... e6 { [%eval 0.2] } (3... g6 4. Bxc6 dxc6 5. d3 { [%cal Gd8c7,Ge7e5] } 5... Bg7 6. h3 Nf6 7. Nc3 O-O (7... b6 8. Be3 { [%csl Gd3,Ge4][%cal Gc1e3,Gb1c3,Gg1f3,Gh2h3,Gd1d2,Ge3h6] } 8... O-O) 8. Be3 { [%csl Ge4,Gd3,Gc2,Gh3,Gg2,Gf2,Ge3,Gc5] } 8... b6 9. Qd2 { [%csl Gc6,Gc5][%cal Ge1c1,Ge1g1,Ga2a3,Gb2b4,Ga2a4,Ga7a5,Ge4e5] } 9... e5 10. Bh6 { [%cal Gh6g7] } 10... Qd6 11. Bxg7 Kxg7 12. O-O Re8 13. a4 a5 14. b3 { [%csl Gc4][%cal Gc3d1,Gd1e3,Ge3c4] }) 4. O-O { [%eval 0.24] } (4. Bxc6 bxc6 5. d3 (5. c3 Ne7 (5... c4 6. b3 cxb3 7. axb3) 6. d4 (6. O-O Ng6 7. d4 cxd4 8. cxd4 Be7 9. Nc3 O-O) 6... cxd4 7. cxd4 Ba6) 5... Ne7 6. h4 h5 7. e5) 4... Nge7 { [%eval 0.32] [%csl Gc6,Ge6] } 5. Re1 { [%eval 0.24] } 5... a6 { [%eval 0.42] } 6. Bf1 { [%eval 0.29] } { this is a
+good line, nvm, I just couldn't remember OTB } (6. Bxc6 { this is probably my
+line. I kinda forgot my lines tbh, I wasn't expecting to play Shubh today. Need
+to fill out some ideas here }) 6... d5 { [%eval 0.2] } 7. exd5 { [%eval 0.36] } 7... Nxd5 { [%eval 0.4] } 8. d4 { [%eval 0.46] } { here we're following the mainlines } { [%csl Ge6][%cal Gc2c4,Gc8e6] } 8... Be7 { [%eval 0.72] } (8... cxd4 9. Nxd4 Nxd4 10. Qxd4 { [%csl Gg7] }) (8... Nf6 { is the actual mainline but hard to consider
+OTB } 9. Be3 Be7 10. c4 O-O 11. Nc3 cxd4 (11... b6!? { is what I remember from my
+foray into the e6 Rossolimo as Black. Personally, I just thought WH was better
+here } 12. Qd2 Bb7 13. Rad1 cxd4 14. Nxd4 Ne5 15. h3 Ng6 16. Nb3) 12. Nxd4 Ne5 (12... Bd7 { fine for BL but everything here is a little passive })) 9. dxc5 { [%eval 0.69] } { seemed very natural to me with Q side expansion on the way. I couldn't tell if
+I had messed up my lines or not, but I was definitely not playing what I was
+trying to remember. But I think he deviated first because this is still pretty
+mainline. BL looks pretty well developed, but my space advantage starts showing
+up in a big way } 9... Bxc5 { [%eval 0.84] } (9... O-O { is something I thought he might try } 10. a3 { in Tarrasch fashion } 10... a5 11. c4 Nf6 12. Qc2 Bxc5 13. Nc3) 10. c4 { [%eval 0.9] } 10... Nf6 { [%eval 0.86] } 11. Qxd8+ { [%eval 0.83] } 11... Kxd8 $14 { [%eval 0.93] } { Here I felt pretty good about my chances. I took
+some time to land on the ideas I went forward with but it all flowed really
+well } { [%cal Ga2a3,Gb1c3] } (11... Nxd8 12. Nc3 (12. a3 Ng4) 12... b6 (12... Ng4 13. Ne4) 13. a3) 12. Nc3 { [%eval 0.8] } (12. a3 { was initially thinking about this in Tarrasch fashion but } 12... Ng4 { was annoying. So then I switched to Nc3 and Bf4 ideas }) 12... h6 { [%eval 1.13] } { seemed a little slow but avoids a lot of the Bg5 Nd5 ideas I was looking at } (12... Ke7 { also a good option } 13. Bg5 (13. Nd5+ Nxd5 14. cxd5 Nb4) (13. Na4) 13... h6 14. Bh4 Kf8 { is a little hard to see though } (14... g5 15. Nxg5 hxg5 16. Bxg5 { apparently does work for WH. I was staring at this and couldn't tell } 16... Bd6 17. h4 Be5 18. Rxe5 Nxe5 19. Re1 Nd7 20. Nd5+ { [%csl Ge7,Gf6,Gd7] })) (12... Ng4 13. Ne4 { [%csl Gf2][%cal Ge4f2] }) (12... Bd7 { a little quicker and
+better most likely } 13. Bf4 Nd4 14. Ng5 Ke7 15. Rad1 Bc6 16. Nd5+ Bxd5 17. cxd5 Nxd5 18. Be5 Nc2 19. Rxd5 exd5 20. Re2 Nb4 21. Bxg7+ Kd7 22. Bxh8 Rxh8 23. a3) (12... Nb4 13. Bg5 { [%cal Gb4c2,Ga1d1,Ge1e2] } (13. a3 Nc2 14. Rd1+ Ke8 15. Ra2 { [%csl Gc2] }) 13... Nc2 14. Rad1+ Ke8 15. Re2 { [%csl Gd1] }) 13. a3 { [%eval 0.74] } (13. Na4 { an idea I saw later
+and is better here } 13... Ba7 14. b3 { is quite good according to the eng } 14... Bd7 (14... Ng4 15. c5) 15. Ba3 $16 { is quite nice }) 13... a5 { [%eval 1.27] } { this inclusion
+favored me, giving me more holes in his q side to work with } { [%csl Gb5,Gb6] } (13... Ke7! { is critical, bc b4 really isn't the worst for BL } 14. b4 Ba7 (14... Bd6 15. Nd5+) 15. c5 { WH has a pleasant position but not as good as after
+Na4 b3 } (15. Rb1 Rd8 16. c5 b5 17. cxb6 Bxb6 18. Na4 Ba7 19. Bb2 Bd7 20. Nc5 Bxc5 21. bxc5)) 14. Bf4 { [%eval 1.26] [%csl Gf4][%cal Gc3b5] } (14. Na4 Ba7 (14... Bd6 15. Rd1 (15. Nb6 Rb8) 15... Ke7) 15. b4) (14. Nb5) 14... Bd7 { [%eval 1.5] } (14... Ke7 { I was expecting
+something more like this } 15. Na4 (15. Nd5+ Kf8 16. Nc7 Ra7 17. Nb5 Ra8 18. Rad1) 15... b6 { isn't as good for WH } (15... Ba7 { is what I was looking at, but a
+little too cooperative. b6 is better } 16. c5 Bb8 17. Nb6 Ra7 18. Bxb8 Nxb8 { was an
+idea I was looking at. Basically there's nothing that looks crushing but WH has
+a firm grip of the position } 19. b4)) (14... g5 { an interesting idea I wasn't
+sure how to evaluate } 15. Bg3 Nh5 16. Rad1+ { seemed good enough }) 15. Rad1 { [%eval 1.53] } (15. b4 { I really wanted this idea to work but just couldn't make it. Spent too
+long reviewing my calc on this instead of just accepting it doesn't work } 15... axb4 16. axb4 Rxa1 17. Rxa1 Bxb4 18. Ra8+ Bc8 { and I can't break through } 19. Na4 Nd7) (15. Na4 Ba7 16. c5 { is also something I thought about } (16. Rad1) (16. b4 e5! { is the only reason why b4 isn't good here. I guess I had a good
+ish intuition } 17. Bxe5 Nxe5 18. Nxe5 Bxa4 19. Nxf7+ Kd7 20. Nxh8 Rxh8 { with a very
+imbalanced position but WH is better }) 16... Nd5 { but I didn't like giving up
+the d5 square }) 15... Ke7 $18 { [%eval 1.73] } (15... a4!?) 16. Na4 { [%eval 1.82] } { second best idea here, Nd5
+was apparently crushing but I misevaluated it } (16. Nd5+! { is actually just
+crushing } 16... Nxd5 (16... Kd8 17. Bc7+ Ke8 18. Nd2 { and the rest of the pieces
+start to fill in the blanks }) 17. cxd5 Nb8) 16... Ba7 { [%eval 1.79] } 17. Bd6+ { [%eval 1.82] } { now I'm starting
+to really enjoy my position, everything is flowing well } 17... Ke8 { [%eval 1.77] } (17... Kd8 18. Nc5 (18. c5 Ne8) 18... Kc8 { was an option }) 18. Nc5 { [%eval 1.58] } (18. c5! { is a little
+stronger here } 18... Bb8 19. Nb6 Bxd6 20. cxd6 Rd8 21. Nd2 { and even though there's
+no concrete smush, BL is totally busted }) 18... Bxc5 { [%eval 1.74] } { I think this had to be a
+major strategical mistake. BL's dark sq are just way too weak after this } (18... Bb8 19. Nxb7 { is one of the reasons I went Nc5, to prevent Bb8 and the DSB
+trade }) (18... Bc8 { looks passive but holds down the fort for Bb8 and BL can
+try to slowly trade off and extricate themselves from the bind } 19. g3 { idk what
+else to do but this helps improve my worst piece and generate a catalan bishop }) (18... Nd8 { another thing I was trying to evalueate } 19. b4 { seemed good }) 19. Bxc5 { [%eval 1.7] } 19... Rc8?! { [%eval 2.34] } { Inaccuracy. a4 was best. } (19... a4 20. g3 Rg8 21. Bd6 Rc8 22. c5 g5 23. Rd3 h5 24. Bg2 g4 25. Nd4) 20. b4! { [%eval 2.45] } { I was quite
+happy to get my Qside majority rolling. Eng agrees tihs is best } (20. Bd6 { also
+an idea but I wanted to play quickly }) 20... axb4 { [%eval 3.15] } (20... Ne7 { not letting WH get
+the a file to work with }) 21. axb4 { [%eval 2.85] } 21... Ne7?! { [%eval 3.61] } { Inaccuracy. Na5 was best. } (21... Na5 22. Nd4 b6 23. Bxb6 Nxc4 24. Bc5 Nb2 25. Ra1 Na4 26. Bd6 Ra8 27. Nb3) 22. Nd4 { [%eval 2.99] } { trying to prevent Bc6 and Nf5 } (22. Ra1 { a bit more direct }) 22... Bc6 { [%eval 3.71] } (22... Ng6 23. Nf5 { was a neat idea to limit BL's options }) 23. b5?! { [%eval 2.89] } { Inaccuracy. Ra1 was best. } { Not the best,
+giving BL some options. That said, it's all +3 anyways } (23. Nxe6 { I kept trying
+to make this work but it never really seemed to } 23... fxe6 24. Rxe6 Rc7 25. Rde1 Ne4 26. Rxe7+ Rxe7 27. Bxe7 Kxe7 28. f3 Rd8 29. fxe4 Rd4 { was interesting and
+probably also good but WH is very passive here. That said, two pawns } 30. e5) (23. Ra1 Rb8 (23... h5 24. h4 Rb8 25. Bd3 Bd7 26. f3 Rg8 27. b5 g5 28. Bd6 Rc8) 24. f3 Bd7 25. b5 { and the eng shows how WH can take it slow and
+measured }) 23... Be4 { [%eval 3.37] } (23... Bf3 24. Bxe7 Bxd1 25. Bxf6 gxf6 26. Rxd1 { with good
+prospects for WH }) (23... Bxg2 24. Bxe7 Bxf1 25. Bxf6 Bxc4 26. Bh4 { I was a little
+worried about this one. The eng says it's completely winning too, but it's easy
+to see how WH could go wrong }) (23... Bd7 24. Bb4 { was the intention }) 24. Bb4 { [%eval 3.33] } 24... Nf5?! { [%eval 4.22] } { Inaccuracy. Rd8 was best. } { for some reason this completely slipped my mind. I thought I had Nb3 here
+with easy play but of course } (24... Rd8 25. f3 e5 26. Nb3 Bc2 27. Rxd8+ Kxd8 28. Na5 b6 29. Rxe5 bxa5 30. Bxe7+) 25. f3 { [%eval 4.3] } { seemed like a useful inclusion } (25. Nb3 Bc2) (25. Nxf5 Bxf5 { without f3 may have some back rank issues }) 25... Nxd4 { [%eval 4.58] } 26. Rxd4 { [%eval 4.45] } 26... Bc2 { [%eval 5.18] } (26... e5 27. Rdxe4 Nxe4 28. Rxe4 f6 29. f4 { with easy play }) 27. Rc1?! { [%eval 4.1] } { Inaccuracy. Ra1 was best. } { 14 minutes left } (27. Ra1 g5 (27... Nd7 28. Ra7) (27... b6 28. Ra7 { [%csl Ge7] } 28... g5 29. Rd6 (29. Re7+ Kf8 30. Rxe6+ Kg7 31. Rxb6 { also works })) (27... Rg8 28. b6 e5 29. Rd2 Bf5 30. Ra7 Rd8 31. Rxd8+ Kxd8 32. Rxb7 Re8) 28. Ra7 Rb8 29. Bd6) 27... Bf5 { [%eval 4.47] } 28. Ra1 { [%eval 4.26] } (28. g4 { I saw this, but decided not to go
+crazy. during the game I was kicking myself for not playing this bc it takes the
+LSB off the c8 to h3 diagonal }) 28... e5 { [%eval 4.01] } 29. Rd6 { [%eval 4.04] } (29. Rdd1 { surprisingly best }) 29... Rd8 { [%eval 3.75] } { something I missed here but WH is still completely winning } (29... Nd7 { seemed much stronger and more difficult for me to get a concrete } 30. Ra7 b6 31. Rc6 { was the idea I had } 31... Rd8 (31... Rxc6 { doesn't work to } 32. bxc6 Nc5 33. Ra8+)) 30. Rxd8+ $18 { [%eval 3.77] } { simplest } 30... Kxd8 { [%eval 3.64] } 31. Ra8+ { [%eval 4.6] } 31... Bc8 { [%eval 4.63] } 32. c5 { [%eval 4.68] } { and here I felt very good about my chances to win. BL's in disarray and my
+majority and bishop pair are bearing down on his position } 32... Nd5 { [%eval 4.57] } 33. Ba5+ { [%eval 4.27] } 33... Kd7 { [%eval 4.62] } (33... Ke7) 34. Bc4 { [%eval 4.75] } 34... Nf4 { [%eval 5.09] } { a little out of place but not much else to do } 35. c6+ { [%eval 5.11] } { 4 minutes left } (35. Bxf7 { also considered this but couldn't tell what was
+better in time trouble }) 35... bxc6 { [%eval 5.19] } 36. b6 { [%eval 5.31] } 36... Ng6 { [%eval 5.48] } (36... Rh7 37. Ra7+ Kd6 38. b7 { was
+one of the main ideas, and it turns into bishop pair vs N and a pawn or two }) 37. Bxf7 { [%eval 5.53] } 37... Bb7 { [%eval 5.54] } 38. Ra7 { [%eval 5.35] } 38... Kc8 { [%eval 6.36] } 39. Bxg6 { [%eval 6.32] } 39... Rd8 { [%eval 5.97] } 40. Bf5+ { [%eval 5.83] } 40... Kb8 { [%eval 5.96] } 41. Bc3 { [%eval 6.19] } 41... Rd5 { [%eval 6.18] } 42. Ra5 { [%eval 6.0] } 42... Rxa5 { [%eval 6.04] } 43. Bxa5 { [%eval 5.78] } { and he resigned around here } 1-0
