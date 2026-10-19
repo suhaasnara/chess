@@ -1,0 +1,50 @@
+name: Update game boards
+
+# Keeps the self-hosted game boards in sync with the Lichess study "My 60".
+# Saves data/games/<chapter>.pgn for every data-game="..." on the site, and the
+# pinned copy of Lichess's open-source PGN viewer in vendor/lpv/.
+on:
+  schedule:
+    - cron: "41 13 * * *"   # daily, 7:41 am Mountain (13:41 UTC)
+  workflow_dispatch:         # run it by hand from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - blog/*.html
+      - scripts/update_games.py
+      - .github/workflows/update-games.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-games
+  cancel-in-progress: false
+
+env:
+  LPV_VERSION: "2.7.3"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Save the PGN viewer (only when the pinned version changes)
+        run: |
+          if [ "$(cat vendor/lpv/VERSION 2>/dev/null)" = "$LPV_VERSION" ]; then echo "Viewer already at $LPV_VERSION."; exit 0; fi
+          mkdir -p vendor/lpv /tmp/lpv
+          cd /tmp/lpv && npm pack "@lichess-org/pgn-viewer@$LPV_VERSION" && tar xzf lichess-org-pgn-viewer-*.tgz
+          cp package/dist/lichess-pgn-viewer.min.js package/dist/lichess-pgn-viewer.css package/LICENSE "$GITHUB_WORKSPACE/vendor/lpv/"
+          echo "$LPV_VERSION" > "$GITHUB_WORKSPACE/vendor/lpv/VERSION"
+      - name: Pull the games from Lichess
+        run: python3 scripts/update_games.py
+      - name: Commit if anything changed
+        run: |
+          git add data/games vendor/lpv
+          if git diff --cached --quiet; then echo "Nothing to commit."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update game boards"
+          git pull --rebase
+          git push
