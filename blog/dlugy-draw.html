@@ -22,6 +22,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../vendor/lpv/lichess-pgn-viewer.css?v=2.7.3">
+<link rel="stylesheet" href="../games.css?v=1">
 <style>
   /* Same design tokens as the main chess site */
   :root {
@@ -105,7 +107,7 @@
   .game-head h2 { margin: 0 0 8px; }
   .game-meta { font-size: 0.95rem; color: var(--muted); margin-bottom: 20px !important; }
   .board-embed { margin: 24px 0 8px; }
-  .board-embed iframe { width: 100%; aspect-ratio: 600 / 397; border: 0; border-radius: 4px; background: var(--band); }
+  .board-embed .game-board { min-height: 320px; }
   .embed-note { font-size: 0.85rem; color: var(--muted); }
   article h3 { font-size: 1.2rem; margin: 32px 0 12px; }
   .moves { list-style: none; margin: 0 0 24px; }
@@ -159,7 +161,7 @@
   <p>Now, I will say this game isn't pretty. I built up and squandered an opening advantage as Black. He outplays me but misses some critical ideas to cement his advantage at a few points. Then a natural but slow move like Qc3 lets everything trade off, and I hunt down the draw.</p>
   <p>I covered this game briefly in <a href="three-games.html">Three Games That Got Me to NM</a>. This is the full version, with the lines I looked at after the game.</p>
 
-  <div class="board-embed"><iframe data-game="r3iOWa6i" src="https://lichess.org/study/embed/oAqAo3ZN/r3iOWa6i?theme=blue&amp;bg=light" title="Dlugy vs. Narayanan, with my annotations" loading="lazy"></iframe></div>
+  <div class="board-embed"><div class="game-board" data-game="r3iOWa6i" role="region" aria-label="Dlugy vs. Narayanan, with my annotations"><noscript><p class="game-msg">The board needs JavaScript. <a href="https://lichess.org/study/oAqAo3ZN/r3iOWa6i" target="_blank" rel="noopener">Open this game on Lichess</a></p></noscript></div></div>
   <p class="embed-note">Step through the full game with all my notes and variations, or <a href="https://lichess.org/study/oAqAo3ZN/r3iOWa6i" target="_blank" rel="noopener">open it on Lichess</a>.</p>
 
   <figure class="ev">
@@ -313,5 +315,6 @@ var EV={"m":["1.d4","1...d5","2.Bf4","2...Nf6","3.e3","3...e6","4.Nd2","4...c5",
 </script>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ac4439d40705499ab789aa120376ae2f"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="../games.js?v=1" defer></script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+/* Site theme for the self-hosted game boards (games.js + vendor/lpv).
+   Light colors from the chess site's palette; Lichess "blue" board squares. */
+.game-board { width: 100%; }
+.game-board .lpv {
+  --c-lpv-bg: #ffffff;
+  --c-lpv-font: #24303f;
+  --c-lpv-font-shy: #8792a2;
+  --c-lpv-font-bg: #ffffff;
+  --c-lpv-pgn-text: #24303f;
+  --c-lpv-border: #d9e1ec;
+  --c-lpv-side-border: #d9e1ec;
+  --c-lpv-bg-movelist: #ffffff;
+  --c-lpv-bg-variation: #f2f6fb;
+  --c-lpv-bg-player: #f2f6fb;
+  --c-lpv-bg-controls: #f2f6fb;
+  --c-lpv-bg-pane: #ffffff;
+  --c-lpv-accent: #1f4e8c;
+  --c-lpv-accent-over: #ffffff;
+  --c-lpv-current-move: #1f4e8c;
+  --c-lpv-move-hover: #4a72a8;
+  --c-lpv-fbt-hover: #4a72a8;
+  --c-lpv-past-moves: #24303f;
+  --c-lpv-inaccuracy: #1c75b0;
+  --c-lpv-mistake: #a66f00;
+  --c-lpv-blunder: #c0392b;
+  --c-lpv-good-move: #1d7f37;
+  --c-lpv-brilliant: #13802a;
+  --c-lpv-interesting: #a3368f;
+  background: #ffffff;
+  color: #24303f;
+  border: 1px solid #d9e1ec;
+  border-radius: 4px;
+  font-size: 15px;
+  /* Board as big as fits: at most 58% of the width, and short enough to see whole on a laptop. */
+  grid-template-columns: minmax(200px, min(58%, calc(100vh - 2 * 2em - var(--controls-height) - 40px))) minmax(232px, 1fr);
+}
+.game-board cg-board { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%23dee3e6'/%3E%3Cg fill='%238ca2ad'%3E%3Crect x='1' y='0' width='1' height='1'/%3E%3Crect x='3' y='0' width='1' height='1'/%3E%3Crect x='5' y='0' width='1' height='1'/%3E%3Crect x='7' y='0' width='1' height='1'/%3E%3Crect x='0' y='1' width='1' height='1'/%3E%3Crect x='2' y='1' width='1' height='1'/%3E%3Crect x='4' y='1' width='1' height='1'/%3E%3Crect x='6' y='1' width='1' height='1'/%3E%3Crect x='1' y='2' width='1' height='1'/%3E%3Crect x='3' y='2' width='1' height='1'/%3E%3Crect x='5' y='2' width='1' height='1'/%3E%3Crect x='7' y='2' width='1' height='1'/%3E%3Crect x='0' y='3' width='1' height='1'/%3E%3Crect x='2' y='3' width='1' height='1'/%3E%3Crect x='4' y='3' width='1' height='1'/%3E%3Crect x='6' y='3' width='1' height='1'/%3E%3Crect x='1' y='4' width='1' height='1'/%3E%3Crect x='3' y='4' width='1' height='1'/%3E%3Crect x='5' y='4' width='1' height='1'/%3E%3Crect x='7' y='4' width='1' height='1'/%3E%3Crect x='0' y='5' width='1' height='1'/%3E%3Crect x='2' y='5' width='1' height='1'/%3E%3Crect x='4' y='5' width='1' height='1'/%3E%3Crect x='6' y='5' width='1' height='1'/%3E%3Crect x='1' y='6' width='1' height='1'/%3E%3Crect x='3' y='6' width='1' height='1'/%3E%3Crect x='5' y='6' width='1' height='1'/%3E%3Crect x='7' y='6' width='1' height='1'/%3E%3Crect x='0' y='7' width='1' height='1'/%3E%3Crect x='2' y='7' width='1' height='1'/%3E%3Crect x='4' y='7' width='1' height='1'/%3E%3Crect x='6' y='7' width='1' height='1'/%3E%3C/g%3E%3C/svg%3E"); background-color: #dee3e6; }
+.game-board .lpv__moves { scroll-behavior: auto; }
+.game-board .lpv__controls { background: var(--c-lpv-bg-controls); }
+.game-board .lpv__fbt { color: #536175; }
+.game-msg { padding: 2.5em 1em; text-align: center; color: #536175; margin: 0; }
+/* Phones and narrow columns: board on top, notes underneath with room to read them. */
+@media (max-width: 640px) {
+  .game-board .lpv.lpv--moves-auto {
+    grid-template-areas: "player-top" "board" "player-bot" "controls" "side";
+    grid-template-columns: minmax(200px, 1fr);
+    grid-template-rows: 2em auto 2em var(--controls-height) 16em;
+  }
+  .game-board .lpv.lpv--moves-auto .lpv__controls { border-bottom: 1px solid var(--c-lpv-border); }
+}
