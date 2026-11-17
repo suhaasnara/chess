@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# Editors
+.vscode/
+.idea/
+
+# Large data
+*.sqlite
+*.sqlite3
+*.db
+*.zip
+*.gz
